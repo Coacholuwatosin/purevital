@@ -107,6 +107,9 @@ body {
 
 
 /* ========== Testimonials ========== */
+
+
+
 .testimonials {
   padding: 34px 0;
 }
@@ -149,6 +152,21 @@ body {
   font-size: 0.9rem;
   color: var(--muted);
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 /* ========== Pricing / offers ========== */
 .pricing-grid {
