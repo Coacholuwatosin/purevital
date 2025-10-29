@@ -1,0 +1,19 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 480">
+  <defs>
+    <linearGradient id="g1" x1="0" x2="1">
+      <stop offset="0" stop-color="#f7fbf9"/>
+      <stop offset="1" stop-color="#fff"/>
+    </linearGradient>
+  </defs>
+  <rect rx="28" width="320" height="480" fill="url(#g1)"/>
+  <g transform="translate(40,40)">
+    <rect width="240" height="360" rx="18" fill="#fff" stroke="#e9f6ef" stroke-width="2"/>
+    <rect y="22" width="240" height="120" rx="12" fill="#eafbf0"/>
+    <text x="20" y="70" font-family="Poppins, Arial" font-weight="700" font-size="20" fill="#0a8c3e">Neolife</text>
+    <text x="20" y="100" font-family="Poppins, Arial" font-weight="600" font-size="14" fill="#0a8c3e">Chelated Cal‑Mag</text>
+    <text x="20" y="140" font-family="Poppins, Arial" font-size="12" fill="#333">Calcium + Magnesium + D3</text>
+    <rect x="20" y="200" width="200" height="8" rx="4" fill="#0a8c3e" opacity="0.08"/>
+    <rect x="20" y="220" width="200" height="8" rx="4" fill="#0a8c3e" opacity="0.08"/>
+    <rect x="20" y="240" width="200" height="8" rx="4" fill="#0a8c3e" opacity="0.08"/>
+  </g>
+</svg>
