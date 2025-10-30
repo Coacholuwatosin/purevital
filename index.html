@@ -42,6 +42,12 @@
 
 
 
+
+
+
+
+
+
 <!-- ========== HEADER (Purevital Living) ========== -->
 
 
@@ -62,12 +68,12 @@
     </button>
 
     <div class="nav-right" id="primary-menu">
-      <a class="headerbtn btn-primary" 
+      <a class="header-action-btn" 
          href="https://wa.me/2348123456789?text=Hello%2C%20I%20want%20to%20order%20Neolife%20Chelated%20Cal-Mag" 
          target="_blank" 
          rel="noopener noreferrer"
          aria-label="Order Neolife Cheleted Cal-Mag">
-         Order Now
+         Shop Now
       </a>
     </div>
   </nav>
@@ -84,7 +90,6 @@
   box-shadow: 0 8px 24px rgba(0, 0, 0, 0.1);
   transition: background 0.3s ease, box-shadow 0.3s ease;
 }
-
 .nav {
   display: flex;
   align-items: center;
@@ -92,17 +97,15 @@
   gap: 20px;
   padding: 0.75rem 0;
 }
-
 .brand {
   display: flex;
   align-items: center;
   gap: 12px;
   text-decoration: none;
-  color: var(--accent);
+  color: #0b3019;
   font-weight: 700;
   font-size: 1.05rem;
 }
-
 .brand-logo {
   width: 44px;
   height: 44px;
@@ -113,31 +116,26 @@
   padding: 6px;
   transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
-
 .brand:hover .brand-logo {
   transform: scale(1.05);
   box-shadow: 0 6px 20px rgba(0, 0, 0, 0.15);
 }
-
 .nav-right {
   display: flex;
   align-items: center;
   gap: 12px;
 }
-
 .nav-toggle {
   background: none;
   border: none;
   cursor: pointer;
-  color: var(--accent);
+  color: #0b3019;
   display: none;
 }
-
 .nav-toggle svg {
   width: 26px;
   height: 26px;
 }
-
 .sr-only {
   position: absolute;
   width: 1px;
@@ -148,35 +146,30 @@
   clip: rect(0,0,0,0);
   border: 0;
 }
-
-.headerbtn {
+.header-action-btn {
   display: inline-flex;
   align-items: center;
   justify-content: center;
   gap: 10px;
-  padding: 12px 22px;
-  border-radius: 10px;
-  font-weight: 700;
+  padding: 12px 26px;
+  border-radius: 16px;
+  font-weight: 600;
   text-decoration: none;
-  border: none;
+  border: 1px solid rgba(255, 255, 255, 0.4);
   cursor: pointer;
-  transition: all 0.25s ease;
+  color: #0a3a22;
+  background: rgba(255, 255, 255, 0.2);
+  backdrop-filter: blur(10px);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+  transition: all 0.3s ease;
 }
 
-.headerbtn:hover {
-  transform: translateY(-2px);
-  box-shadow: 0 8px 24px rgba(0,0,0,0.12);
+.header-action-btn:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 12px 25px rgba(0, 0, 0, 0.25);
+  background: rgba(255, 255, 255, 0.35);
+  border-color: rgba(255, 255, 255, 0.6);
 }
-
-/* .headerbtn-primary {
-  background: linear-gradient(90deg, #FF4E50, #F9D423);
-  color: #fff;
-  box-shadow: 0 4px 12px rgba(0,0,0,0.12);
-}
-
-.headerbtn-primary:hover {
-  opacity: 0.95;
-} */
 
 @media (max-width: 768px) {
   .nav-right {
@@ -192,11 +185,9 @@
     box-shadow: 0 12px 36px rgba(0, 0, 0, 0.15);
     display: none;
   }
-
   .nav-toggle {
     display: block;
   }
-
   .nav-right.active {
     display: flex;
   }
@@ -206,7 +197,6 @@
 <script>
 const toggle = document.querySelector('.nav-toggle');
 const menu = document.querySelector('#primary-menu');
-
 toggle.addEventListener('click', () => {
   const isOpen = menu.classList.toggle('active');
   toggle.setAttribute('aria-expanded', isOpen);
@@ -222,8 +212,96 @@ toggle.addEventListener('click', () => {
 
 
 
+<!-- ==== MARQUEE SECTION ==== -->
 
+<div class="announcement-bar" id="announcementBar">
+  <div class="announcement-track">
+    <span class="announcement-item"><i class="ri-shield-check-fill" style="color:#00ff88"></i> Verified Neolife Product</span>
+    <span class="announcement-item"><i class="ri-truck-fill" style="color:#ffd43b"></i> Nationwide Delivery</span>
+    <span class="announcement-item"><i class="ri-bank-card-2-fill" style="color:#ff6b6b"></i> Pay on Delivery</span>
+    <span class="announcement-item"><i class="ri-home-smile-2-fill" style="color:#4da6ff"></i> Free Home Delivery</span>
+    <span class="announcement-item"><i class="ri-star-smile-fill" style="color:#f39c12"></i> Loved by 300+ Nigerians</span>
+    <span class="announcement-item"><i class="ri-shield-check-fill" style="color:#00ff88"></i> Verified Neolife Product</span>
+    <span class="announcement-item"><i class="ri-truck-fill" style="color:#ffd43b"></i> Nationwide Delivery</span>
+    <span class="announcement-item"><i class="ri-bank-card-2-fill" style="color:#ff6b6b"></i> Pay on Delivery</span>
+    <span class="announcement-item"><i class="ri-home-smile-2-fill" style="color:#4da6ff"></i> Free Home Delivery</span>
+    <span class="announcement-item"><i class="ri-star-smile-fill" style="color:#f39c12"></i> Loved by 300+ Nigerians</span>
+  </div>
+</div>
 
+<style>
+.announcement-bar {
+  position: relative;
+  width: 100%;
+  overflow: hidden;
+  background: linear-gradient(90deg, #04632b, #09b34a);
+  font-weight: 600;
+  color: #fff;
+  padding: 10px 0;
+  box-shadow: 0 2px 10px rgba(0,0,0,0.15);
+  z-index: 5;
+  transition: all 0.4s ease;
+}
+.announcement-fixed {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 99;
+  animation: fadeIn 0.3s ease;
+}
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(-10px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+.announcement-track {
+  display: inline-flex;
+  align-items: center;
+  gap: 60px;
+  white-space: nowrap;
+  animation: scrollBar 22s linear infinite;
+}
+.announcement-item {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  font-size: 0.95rem;
+  opacity: 0.95;
+  text-shadow: 0 0 10px rgba(0,0,0,0.2);
+}
+.announcement-item i {
+  font-size: 1.2rem;
+}
+@keyframes scrollBar {
+  0% { transform: translateX(0); }
+  100% { transform: translateX(-50%); }
+}
+@media (max-width: 768px) {
+  .announcement-bar { font-size: 0.85rem; padding: 8px 0; }
+  .announcement-track { gap: 40px; animation-duration: 14s; }
+  .announcement-item i { font-size: 1rem; }
+}
+@media (max-width: 480px) {
+  .announcement-track { animation-duration: 11s; }
+}
+</style>
+
+<script>
+const announcementBar = document.getElementById('announcementBar');
+const header = document.querySelector('.site-header');
+let headerHeight = header ? header.offsetHeight : 0;
+window.addEventListener('scroll', () => {
+  const headerBottom = header.getBoundingClientRect().bottom;
+  if (headerBottom <= 0) {
+    announcementBar.classList.add('announcement-fixed');
+  } else {
+    announcementBar.classList.remove('announcement-fixed');
+  }
+});
+window.addEventListener('resize', () => {
+  headerHeight = header ? header.offsetHeight : 0;
+});
+</script>
 
 
 
@@ -237,6 +315,12 @@ toggle.addEventListener('click', () => {
 
 
 <main>
+
+
+
+
+
+
 
 
 
@@ -342,16 +426,16 @@ toggle.addEventListener('click', () => {
 }
 
 .hero-rating-count {
-  color: #27ae60;
-  font-size: 1rem;
-  font-weight: 700;
+  color: #27ae5fcf;
+  font-size: 14px;
+  font-weight: 600;
 }
 
 .hero-title {
   margin: 0 0 20px;
   font-size: 2.8rem;
   line-height: 1.08;
-  font-weight: 800;
+  font-weight: 900;
   color: #0d2618;
   letter-spacing: -0.5px;
 }
@@ -395,13 +479,13 @@ toggle.addEventListener('click', () => {
 }
 
 .hero-btn-primary {
-  background: linear-gradient(135deg, #6fcf97, #27ae60);
+  background: linear-gradient(15deg, #01a44a, #042812);
   color: #fff;
   border: none;
 }
 
 .hero-btn-primary:hover {
-  background: linear-gradient(135deg, #27ae60, #6fcf97);
+  background: linear-gradient(135deg, #042812, #01A44A);
   transform: translateY(-2px);
 }
 
@@ -721,7 +805,7 @@ playBtn.addEventListener('click', () => {
   align-items: center;
   justify-content: center;
   text-decoration: none;
-  background: linear-gradient(135deg, #6fcf97, #27ae60);
+  background: linear-gradient(135deg, #06c167, #0a934a);
   color: #fff;
   border: none;
   transition: all 0.3s ease;
@@ -829,7 +913,7 @@ playBtn.addEventListener('click', () => {
 <style>
 .countdown-section {
   /* background: linear-gradient(135deg, #0aa447, #0cd68b); */
-  background: linear-gradient(135deg, #f9722f, #f9912f);
+  background: linear-gradient(135deg, #ff542a, #f9bc2f);
   /* background-color: #F9A52F; */
   color: #fff;
   padding: 80px 1.5rem;
@@ -1199,7 +1283,6 @@ updateCountdown();
 .benefits-container {
   margin: 120px auto;
   padding: 50px 2rem;
-  font-family: 'Inter', sans-serif;
   color: #0d2618;
   text-align: center;
   border: 2px solid #0aa44859;
@@ -1219,7 +1302,8 @@ updateCountdown();
 }
 
 .benefits-title {
-  font-size: clamp(1.9rem, 4vw, 2.6rem);
+  font-family: 'Inter', sans-serif;
+  font-size: clamp(1.9rem, 4vw, 2.3rem);
   font-weight: 800;
   color: #062d18;
   display: flex;
@@ -1238,7 +1322,7 @@ updateCountdown();
 }
 
 .benefits-subtitle {
-  font-size: clamp(1rem, 2vw, 1.2rem);
+  font-size: clamp(1rem, 2vw, 1.1rem);
   color: #4c6656;
   max-width: 720px;
   margin: 0 auto;
@@ -1306,17 +1390,17 @@ updateCountdown();
     margin-bottom: 40px;
   }
   .benefits-column {
-    align-items: center;
+    align-items: left;
   }
-  .benefit-item {
-    justify-content: center;
-    text-align: center;
-  }
+ 
   .benefits-image img {
     height: 380px;
   }
 }
 @media (max-width: 600px) {
+  .benefits-section{
+    padding: 0 10px;
+  }
   .benefits-container {
     margin: 80px auto;
   }
@@ -1351,6 +1435,7 @@ updateCountdown();
 
 
 <!-- ==== TESTIMONIAL SECTION ==== -->
+
 <div class="testimonials-parent">
   <article class="testimonials-container container">
     <h2 class="section-title"><i class="ri-chat-heart-fill"></i> What Nigerians Are Saying</h2>
@@ -1485,9 +1570,12 @@ updateCountdown();
 }
 
 .testimonials-parent {
-  background: linear-gradient(180deg, #d4f5d5, #9ce29b);
+  /* background: linear-gradient(180deg, #097628 0%, #baf3c1 40%, #8fe89a 100%); */
+  /* background-color: #097628; */
+  background: linear-gradient(90deg, #04632ca4, #09b34ab3);
   padding: 80px 1rem;
 }
+
 
 .testimonials-container {
   margin: 0 auto;
@@ -1595,9 +1683,10 @@ updateCountdown();
 
 .slider-btn {
   position: absolute;
-  top: 50%;
+  top: -30%;
   transform: translateY(-50%);
-  background: var(--primary);
+  /* background: var(--primary); */
+  background: linear-gradient(135deg, #ff7e5f, #feb47b);
   color: #fff;
   width: 50px;
   height: 50px;
@@ -1614,12 +1703,12 @@ updateCountdown();
 }
 
 .slider-btn:hover {
-  background: #0cce57;
+  background: linear-gradient(135deg, #feb47b, #ff7e5f);
   transform: translateY(-50%) scale(1.1);
 }
 
-.prev { left: -15px; }
-.next { right: -15px; }
+.prev { left: 30px; }
+.next { right: 30px; }
 
 @media (max-width: 700px) {
   .testimonial-card { flex: 0 0 80%; }
@@ -1711,7 +1800,6 @@ shuffled.forEach(card => slider.appendChild(card));
 
 
 
-<!-- COUNTDOWN -->
 
 
 
@@ -1721,85 +1809,75 @@ shuffled.forEach(card => slider.appendChild(card));
 
 
 
+<!-- ==== ORDER PACKAGE SECTION ==== -->
 
 
+<section class="offer-wrapper" id="special-offer" aria-labelledby="offer-heading">
+  <div class="offer-section container">
+    <article class="offer-card" itemscope itemtype="https://schema.org/Product">
+      <figure class="offer-image">
+        <img src="assets/calmag.png" alt="Neolife Chelated Cal-Mag Supplement Bottle" itemprop="image" />
+      </figure>
 
+      <div class="offer-content">
+        <h1 class="offer-title" id="offer-heading" itemprop="name">Neolife Chelated Cal-Mag</h1>
+        <p class="offer-subtitle" itemprop="description">
+          Our Chelated Cal-Mag is a game changer you should definitely not sleep on.
+        </p>
 
+        <section class="offer-details">
+          <h2>1 Pack Of Cal-Mag</h2>
+          <ul class="offer-list">
+            <li>✅ 30 days follow up</li>
+            <li>✅ Free delivery + consultation</li>
+            <li>✅ Split payment plan option</li>
+          </ul>
+          <div class="offer-pricing">
+            <p class="offer-total">Total: <span>₦50,000</span></p>
+            <p class="offer-discount" itemprop="offers" itemscope itemtype="https://schema.org/Offer">
+              Discount Price: <strong itemprop="price" content="34000">₦34,000</strong>
+              <meta itemprop="priceCurrency" content="NGN" />
+            </p>
+          </div>
+        </section>
 
+        <section class="offer-timer" id="offer-timer" aria-label="Offer countdown timer">
+          <div class="time-segment">
+            <span id="offer-hours">00</span>
+            <span class="label">Hours</span>
+          </div>
+          <div class="time-segment">
+            <span id="offer-minutes">00</span>
+            <span class="label">Minutes</span>
+          </div>
+          <div class="time-segment">
+            <span id="offer-seconds">00</span>
+            <span class="label">Seconds</span>
+          </div>
+        </section>
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-<!-- CLOSEIN -->
-
-
-
-<section class="offer-section container">
-  <div class="offer-card">
-    <!-- IMAGE ON TOP -->
-    <div class="offer-image">
-      <img src="assets/calmag.png" alt="Neolife Chelated Cal-Mag" />
-    </div>
-
-    <div class="offer-content">
-      <h2 class="offer-title">Neolife Chelated Cal-Mag</h2>
-      <p class="offer-subtitle">
-        Our Chelated Cal-Mag is a game changer you should definitely not sleep on.
-      </p>
-
-      <div class="offer-details">
-        <h3>1 Pack Of Cal-Mag</h3>
-        <ul class="offer-list">
-          <li>✅ 30 days follow up</li>
-          <li>✅ Free delivery + consultation</li>
-          <li>✅ Split payment plan option</li>
-        </ul>
-        <div class="offer-pricing">
-          <p class="offer-total">Total: <span>₦50,000</span></p>
-          <p class="offer-discount">Discount Price: <strong>₦34,000</strong></p>
-        </div>
+        <a href="#order" class="offer-btn" itemprop="url">Order Now</a>
       </div>
-
-      <div class="offer-timer" id="offer-timer">
-        <div class="time-segment">
-          <span id="offer-hours">00</span>
-          <span class="label">Hours</span>
-        </div>
-        <div class="time-segment">
-          <span id="offer-minutes">00</span>
-          <span class="label">Minutes</span>
-        </div>
-        <div class="time-segment">
-          <span id="offer-seconds">00</span>
-          <span class="label">Seconds</span>
-        </div>
-      </div>
-
-      <a href="#order" class="offer-btn">Order Now</a>
-    </div>
+    </article>
   </div>
 </section>
 
 <style>
-.offer-section {
-  background: linear-gradient(180deg, #f9fff9, #f4fff6);
+.offer-wrapper {
+  width: 100%;
+  background: linear-gradient(180deg, #ffffff, #e9fff0);
   display: flex;
   justify-content: center;
   align-items: center;
   padding: 100px 1.5rem;
-  font-family: 'Inter', sans-serif;
 }
-
+.offer-section {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-family: 'Inter', sans-serif;
+  width: 100%;
+}
 .offer-card {
   background: #ffffff;
   border-radius: 24px;
@@ -1810,34 +1888,29 @@ shuffled.forEach(card => slider.appendChild(card));
   text-align: center;
   transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
-
 .offer-card:hover {
   transform: translateY(-6px);
   box-shadow: 0 18px 50px rgba(0, 0, 0, 0.08);
 }
-
 .offer-image img {
   width: 100%;
-  max-width: 260px;
+  max-width: 460px;
   height: auto;
   border-radius: 20px;
   object-fit: contain;
   margin-bottom: 24px;
 }
-
 .offer-title {
   font-size: clamp(1.8rem, 4vw, 2.3rem);
   font-weight: 800;
   color: #0a3a22;
   margin-bottom: 10px;
 }
-
 .offer-subtitle {
   font-size: 1.05rem;
   color: #3e5b49;
   margin-bottom: 34px;
 }
-
 .offer-details {
   background: linear-gradient(135deg, #f8fff9, #f2fcf5);
   border-radius: 18px;
@@ -1846,14 +1919,12 @@ shuffled.forEach(card => slider.appendChild(card));
   border: 1px solid rgba(10, 140, 62, 0.12);
   text-align: left;
 }
-
-.offer-details h3 {
+.offer-details h2 {
   font-size: 1.2rem;
   color: #0d2618;
   font-weight: 700;
   margin-bottom: 14px;
 }
-
 .offer-list {
   list-style: none;
   padding: 0;
@@ -1864,11 +1935,9 @@ shuffled.forEach(card => slider.appendChild(card));
   font-weight: 500;
   color: #123826;
 }
-
 .offer-pricing p {
   margin: 4px 0;
 }
-
 .offer-total {
   color: #606c65;
   font-weight: 500;
@@ -1881,14 +1950,12 @@ shuffled.forEach(card => slider.appendChild(card));
   color: #0aa447;
   font-weight: 700;
 }
-
 .offer-timer {
   display: flex;
   justify-content: center;
   gap: 18px;
   margin-bottom: 40px;
 }
-
 .time-segment {
   background: rgba(10, 164, 71, 0.08);
   border-radius: 12px;
@@ -1896,14 +1963,12 @@ shuffled.forEach(card => slider.appendChild(card));
   width: 90px;
   text-align: center;
 }
-
 .time-segment span:first-child {
   display: block;
   font-size: 1.8rem;
   font-weight: 700;
   color: #0a3a22;
 }
-
 .label {
   display: block;
   font-size: 0.8rem;
@@ -1911,10 +1976,9 @@ shuffled.forEach(card => slider.appendChild(card));
   text-transform: uppercase;
   letter-spacing: 0.5px;
 }
-
 .offer-btn {
   display: inline-block;
-  background: linear-gradient(135deg, #0aa447, #0cd68b);
+  background: linear-gradient(135deg, #06c167, #0a934a);
   color: #fff;
   font-weight: 700;
   font-size: 1.05rem;
@@ -1924,30 +1988,24 @@ shuffled.forEach(card => slider.appendChild(card));
   box-shadow: 0 6px 18px rgba(10, 140, 62, 0.25);
   transition: all 0.3s ease;
 }
-
 .offer-btn:hover {
   transform: translateY(-3px);
   background: linear-gradient(135deg, #0cd68b, #0aa447);
 }
-
 @media (max-width: 600px) {
   .offer-card {
     padding: 36px 24px;
   }
-
   .offer-image img {
     max-width: 200px;
   }
-
   .offer-timer {
     gap: 12px;
   }
-
   .time-segment {
     width: 75px;
     padding: 10px 12px;
   }
-
   .time-segment span:first-child {
     font-size: 1.4rem;
   }
@@ -1956,26 +2014,21 @@ shuffled.forEach(card => slider.appendChild(card));
 
 <script>
 const offerEndTime = new Date();
-offerEndTime.setHours(offerEndTime.getHours() + 6); // 6-hour countdown
-
+offerEndTime.setHours(offerEndTime.getHours() + 6);
 function updateOfferCountdown() {
   const now = new Date();
   const diff = offerEndTime - now;
-
   if (diff <= 0) {
     document.getElementById('offer-timer').innerHTML = "<p>Offer expired!</p>";
     return;
   }
-
   const hours = Math.floor((diff / (1000 * 60 * 60)) % 24);
   const minutes = Math.floor((diff / (1000 * 60)) % 60);
   const seconds = Math.floor((diff / 1000) % 60);
-
   document.getElementById('offer-hours').textContent = String(hours).padStart(2, '0');
   document.getElementById('offer-minutes').textContent = String(minutes).padStart(2, '0');
   document.getElementById('offer-seconds').textContent = String(seconds).padStart(2, '0');
 }
-
 setInterval(updateOfferCountdown, 1000);
 updateOfferCountdown();
 </script>
@@ -1988,65 +2041,72 @@ updateOfferCountdown();
 
 
 
-<!-- FORM -->
 
 
-<section class="order-section container">
-  <div class="order-card">
-    <h2 class="order-title">Fill the Form Below to Claim Your Bottle Before the Offer Ends</h2>
 
-    <form id="orderForm" class="order-form">
-      <div class="form-group">
-        <input type="text" id="name" placeholder="Full Name *" required>
-      </div>
-      <div class="form-group">
-        <input type="tel" id="phone" placeholder="Phone Number (WhatsApp preferred) *" required>
-      </div>
-      <div class="form-group">
-        <input type="email" id="email" placeholder="Email">
-      </div>
-      <div class="form-group">
-        <textarea id="address" rows="3" placeholder="Delivery Address *" required></textarea>
-      </div>
 
-      <div class="form-group">
-        <label for="quantity">Select Quantity *</label>
-        <select id="quantity" required>
-          <option value="" disabled selected>Select...</option>
-          <option>1 Bottle — ₦34,000</option>
-          <option>2 Bottles — ₦65,000 (Save ₦3,000)</option>
-          <option>3 Bottles — ₦99,999</option>
-          <option>Custom Quantity</option>
-        </select>
-      </div>
+<!-- ==== FORM FILLING SECTION ==== -->
 
-      <div class="form-group">
-        <label for="payment">Payment Plan Option *</label>
-        <select id="payment" required>
-          <option value="" disabled selected>Select...</option>
-          <option>Pay Full Now</option>
-          <option>Pay ₦10,000 Now, Balance Later</option>
-        </select>
-      </div>
+<section class="order-wrapper" id="order" aria-labelledby="order-heading">
+  <div class="order-section container">
+    <article class="order-card" itemscope itemtype="https://schema.org/ContactPage">
+      <h1 class="order-title" id="order-heading" itemprop="headline">
+        Fill the Form Below to Process Your Bottle
+      </h1>
 
-      <div class="form-group">
-        <textarea id="note" rows="2" placeholder="Any Special Delivery Instructions?"></textarea>
-      </div>
+      <form id="orderForm" class="order-form" itemprop="potentialAction" itemscope itemtype="https://schema.org/OrderAction">
+        <div class="form-group">
+          <input type="text" id="name" name="name" placeholder="Full Name *" required itemprop="name">
+        </div>
+        <div class="form-group">
+          <input type="tel" id="phone" name="telephone" placeholder="Phone Number (WhatsApp preferred) *" required itemprop="telephone">
+        </div>
+        <div class="form-group">
+          <input type="email" id="email" name="email" placeholder="Email" itemprop="email">
+        </div>
+        <div class="form-group">
+          <textarea id="address" name="address" rows="3" placeholder="Delivery Address *" required itemprop="streetAddress"></textarea>
+        </div>
 
-      <div class="form-check">
-        <input type="checkbox" id="agree" required>
-        <label for="agree">I confirm that the information provided is correct.</label>
-      </div>
+        <div class="form-group">
+          <label for="quantity">Select Quantity *</label>
+          <select id="quantity" name="quantity" required>
+            <option value="" disabled selected>Select...</option>
+            <option>1 Bottle — ₦34,000</option>
+            <option>2 Bottles — ₦65,000 (Save ₦3,000)</option>
+            <option>3 Bottles — ₦99,999</option>
+            <option>Custom Quantity</option>
+          </select>
+        </div>
 
-      <button type="submit" class="order-btn">Submit Order</button>
-      <p class="form-note">We’ll never share your details. Your privacy is safe with us.</p>
-    </form>
+        <div class="form-group">
+          <label for="payment">Payment Plan Option *</label>
+          <select id="payment" name="payment" required>
+            <option value="" disabled selected>Select...</option>
+            <option>Pay Full Now</option>
+            <option>Pay ₦10,000 Now, Balance Later</option>
+          </select>
+        </div>
+
+        <div class="form-group">
+          <textarea id="note" name="note" rows="2" placeholder="Any Special Delivery Instructions?"></textarea>
+        </div>
+
+        <div class="form-check">
+          <input type="checkbox" id="agree" required>
+          <label for="agree">I confirm that the information provided is correct.</label>
+        </div>
+
+        <button type="submit" class="order-btn" itemprop="url">Submit Order</button>
+        <p class="form-note">We’ll never share your details. Your privacy is safe with us.</p>
+      </form>
+    </article>
   </div>
 </section>
 
-<div class="modal" id="sendModal">
+<div class="modal" id="sendModal" role="dialog" aria-modal="true" aria-labelledby="modal-heading">
   <div class="modal-content">
-    <h3>Send Your Order Via</h3>
+    <h2 id="modal-heading">Send Your Order Via</h2>
     <div class="modal-buttons">
       <button id="sendWhatsApp" class="modal-btn whatsapp">WhatsApp</button>
       <button id="sendEmail" class="modal-btn email">Email</button>
@@ -2055,13 +2115,18 @@ updateOfferCountdown();
 </div>
 
 <style>
-.order-section {
-  background: linear-gradient(180deg, #fafffb, #f4fff7);
+.order-wrapper {
   padding: 100px 1.5rem;
   display: flex;
   justify-content: center;
   align-items: center;
-  font-family: 'Inter', sans-serif;
+  width: 100%;
+}
+.order-section {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
 }
 .order-card {
   background: #fff;
@@ -2073,6 +2138,7 @@ updateOfferCountdown();
   text-align: center;
 }
 .order-title {
+  font-family: 'Inter', sans-serif;
   font-size: clamp(1.6rem, 4vw, 2.1rem);
   color: #0a3a22;
   font-weight: 800;
@@ -2126,6 +2192,7 @@ updateOfferCountdown();
   cursor: pointer;
   margin-top: 10px;
   transition: all 0.3s ease;
+  text-decoration: none;
 }
 .order-btn:hover {
   transform: translateY(-3px);
@@ -2155,7 +2222,7 @@ updateOfferCountdown();
   max-width: 400px;
   box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
 }
-.modal-content h3 {
+.modal-content h2 {
   margin-bottom: 24px;
   font-size: 1.4rem;
   color: #0a3a22;
@@ -2217,7 +2284,6 @@ function formatMessage() {
   const quantity = document.getElementById("quantity").value;
   const payment = document.getElementById("payment").value;
   const note = document.getElementById("note").value || "None";
-
   return `🧾 *New Cal-Mag Order*%0A%0A👤 Name: ${name}%0A📞 Phone: ${phone}%0A📧 Email: ${email}%0A🏠 Address: ${address}%0A📦 Quantity: ${quantity}%0A💳 Payment Plan: ${payment}%0A📝 Note: ${note}%0A%0A✅ Ready to confirm order.`;
 }
 
@@ -2253,7 +2319,7 @@ window.addEventListener("click", (e) => {
 
 
 
-<!-- FAQ -->
+<!-- ==== FAQ SECTION ==== -->
 
 
 <section class="faq-section container">
@@ -2328,13 +2394,13 @@ window.addEventListener("click", (e) => {
 .faq-section {
   background: linear-gradient(180deg, #f9fefc, #ffffff);
   padding: 100px 1.5rem;
-  font-family: 'Inter', sans-serif;
   color: #0d2618;
   max-width: 900px;
   margin: 0 auto;
 }
 
 .faq-title {
+  font-family: 'Inter', sans-serif;
   text-align: center;
   font-size: clamp(1.8rem, 4vw, 2.2rem);
   font-weight: 800;
@@ -2453,6 +2519,13 @@ faqItems.forEach(item => {
 
 
 
+
+
+
+
+
+<!-- ==== FOOTER SECTION ==== -->
+
 <footer class="footer-section">
   <div class="footer-top">
     <div class="trust-badges">
@@ -2462,39 +2535,39 @@ faqItems.forEach(item => {
       <div class="badge"><i class="ri-customer-service-2-line"></i><span>Fast Support</span></div>
     </div>
     <p class="delivery-note">
-      We deliver nationwide — Lagos, Abuja, Benin, Ibadan, Ilorin, Enugu, Akure, Port Harcourt, and across Nigeria.
+      We deliver safely to Ogbomoso, Osogbo, Lagos, Ibadan, Abuja, Benin, Edo, Ilorin, Enugu, Akure, Port Harcourt, and across Nigeria.
     </p>
   </div>
 
   <div class="footer-main container">
     <div class="footer-col about">
-      <h4>Neolife Cal-Mag Nigeria</h4>
-      <p>Supporting your body with nature’s best — for calmer muscles, stronger bones, and better sleep.</p>
+      <h4>Pure Vital Living</h4>
+      <p>Empowering your wellness journey with 100% natural supplements for strength, calmness, and vitality.</p>
     </div>
 
     <div class="footer-col links">
       <h4>Quick Links</h4>
-      <ul>
-        <li><a href="#order">Order Now</a></li>
-        <li><a href="#faq">FAQs</a></li>
-        <li><a href="#" id="privacyLink">Privacy Policy</a></li>
-        <li><a href="#" id="refundLink">Refund Policy</a></li>
-      </ul>
+      <nav class="footer-links">
+        <a href="#order">Order Now</a>
+        <a href="#faq">FAQs</a>
+        <a href="#" id="privacyLink">Privacy Policy</a>
+        <a href="#" id="refundLink">Refund Policy</a>
+      </nav>
     </div>
 
     <div class="footer-col contact">
       <h4>Contact Us</h4>
-      <ul>
-        <li><i class="ri-whatsapp-line"></i> <a href="https://wa.me/2348012345678" target="_blank">Chat on WhatsApp</a></li>
-        <li><i class="ri-mail-line"></i> <a href="mailto:support@neolifecalmag.com">support@neolifecalmag.com</a></li>
-        <li><i class="ri-instagram-line"></i> <a href="#">@neolifecalmag_ng</a></li>
-      </ul>
+      <div class="footer-contacts">
+        <a href="https://wa.me/2348012345678" target="_blank"><i class="ri-whatsapp-line"></i> WhatsApp Chat</a>
+        <a href="mailto:support@vitalpurenaturals.com"><i class="ri-mail-line"></i> purevitallivinghub@gmail.com</a>
+        <a href="https://facebook.com/vitalpurenaturals" target="_blank"><i class="ri-facebook-circle-line"></i> Facebook Page</a>
+      </div>
     </div>
   </div>
 
   <div class="footer-bottom">
-    <p>© 2025 Neolife Cal-Mag Nigeria. All rights reserved.</p>
-    <p class="disclaimer">This product is not intended to diagnose, treat, cure, or prevent any disease.</p>
+    <p>© 2018 Pure Vital Living. All rights reserved.</p>
+    <p class="disclaimer">Your wellness partner for natural balance and everyday vitality.</p>
   </div>
 </footer>
 
@@ -2503,28 +2576,27 @@ faqItems.forEach(item => {
   <div class="modal-content">
     <span class="close" id="closePrivacy">&times;</span>
     <h3>Privacy Policy</h3>
-    <p>We respect your privacy and handle your personal information with care. Your data is used solely for order processing, support, and communication related to Neolife Cal-Mag. We never share or sell your details to third parties.</p>
+    <p>We respect your privacy and handle your personal information responsibly. Your data is used only for processing orders and providing customer support. We never share or sell your information to third parties.</p>
   </div>
 </div>
+
 <div class="modal" id="refundModal">
   <div class="modal-content">
     <span class="close" id="closeRefund">&times;</span>
     <h3>Refund Policy</h3>
-    <p>Because our product is a consumable health item, opened packages cannot be returned. However, if your product is damaged, missing, or delivered incorrectly, we’ll replace it at no extra cost. Please contact our support within 48 hours of delivery.</p>
+    <p>Due to the consumable nature of our products, opened items cannot be returned. However, if your package arrives damaged, missing, or incorrect, we’ll replace it promptly at no extra cost. Please contact our support team within 48 hours of delivery.</p>
   </div>
 </div>
 
 <style>
-/* ===== Footer Core ===== */
 .footer-section {
-  background: linear-gradient(135deg, #0a3a22, #0cd68b);
+  background: linear-gradient(135deg, #09351e, #0cd68b);
   color: #fff;
-  font-family: 'Inter', sans-serif;
   padding: 80px 1.5rem 40px;
   border-top-left-radius: 24px;
   border-top-right-radius: 24px;
-  overflow: hidden;
   position: relative;
+  overflow: hidden;
 }
 
 .footer-top {
@@ -2544,7 +2616,7 @@ faqItems.forEach(item => {
   display: flex;
   align-items: center;
   gap: 10px;
-  background: linear-gradient(135deg, rgba(255,255,255,0.1), rgba(255,255,255,0.15));
+  background: rgba(255, 255, 255, 0.12);
   border-radius: 50px;
   padding: 12px 22px;
   font-weight: 600;
@@ -2552,7 +2624,7 @@ faqItems.forEach(item => {
   transform: translateY(30px);
   opacity: 0;
   animation: slideIn 0.6s forwards;
-  transition: transform 0.3s ease, background 0.3s ease;
+  transition: all 0.3s ease;
 }
 .badge:nth-child(1) { animation-delay: 0.1s; }
 .badge:nth-child(2) { animation-delay: 0.2s; }
@@ -2561,26 +2633,20 @@ faqItems.forEach(item => {
 
 .badge i {
   font-size: 1.4rem;
-  background: linear-gradient(45deg, #ffffff, #f0fff5);
+  background: linear-gradient(45deg, #ffffff, #e0fff0);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
-  transition: transform 0.3s ease;
-}
-
-.badge span {
-  transition: color 0.3s ease;
 }
 
 .badge:hover {
   transform: translateY(-5px) scale(1.05);
-  background: linear-gradient(135deg, #0aa44730, #0cd68b50);
+  background: rgba(255, 255, 255, 0.2);
 }
-.badge:hover i { transform: scale(1.2); }
 
 .delivery-note {
   font-size: 0.95rem;
   max-width: 720px;
-  margin: 0 auto;
+  margin: 50px auto;
   color: rgba(255, 255, 255, 0.9);
   font-weight: 500;
 }
@@ -2588,52 +2654,47 @@ faqItems.forEach(item => {
 .footer-main {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
-  gap: 32px;
+  gap: 40px;
   margin-bottom: 40px;
 }
 
 .footer-col h4 {
-  font-size: 1.25rem;
+  font-size: 1.3rem;
   font-weight: 700;
-  margin-bottom: 16px;
+  margin-bottom: 18px;
   color: #fff;
 }
 
-.footer-col p,
-.footer-col ul {
+.footer-col p {
   font-size: 0.95rem;
   color: rgba(255, 255, 255, 0.85);
   line-height: 1.7;
 }
 
-.footer-col ul li {
-  margin-bottom: 12px;
-  position: relative;
+.footer-links, .footer-contacts {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  align-items: left;
 }
 
-.footer-col ul li a {
+.footer-links a, .footer-contacts a {
   text-decoration: none;
   color: #fff;
-  transition: all 0.4s ease;
-  background-image: linear-gradient(90deg, #0cd68b, #0aa447);
-  background-size: 0% 2px;
-  background-repeat: no-repeat;
-  background-position: left bottom;
-}
-.footer-col ul li a:hover {
-  color: #fff;
-  background-size: 100% 2px;
+  font-size: 0.95rem;
+  transition: all 0.3s ease;
 }
 
-.footer-col i {
+.footer-contacts a i {
   margin-right: 8px;
   font-size: 1.2rem;
-  background: linear-gradient(45deg, #ffffff, #f0fff5);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  transition: transform 0.3s ease;
+  vertical-align: middle;
 }
-.footer-col li:hover i { transform: scale(1.2); }
+
+.footer-links a:hover, .footer-contacts a:hover {
+  color: #e9fff0;
+  transform: scale(1.05);
+}
 
 .footer-bottom {
   text-align: center;
@@ -2645,6 +2706,11 @@ faqItems.forEach(item => {
   font-size: 0.9rem;
   margin: 4px 0;
   color: rgba(255, 255, 255, 0.7);
+}
+
+.disclaimer {
+  color: rgba(255, 255, 255, 0.8);
+  font-style: italic;
 }
 
 /* ===== Modal Styling ===== */
@@ -2659,7 +2725,6 @@ faqItems.forEach(item => {
   height: 100%;
   overflow-y: auto;
   background-color: rgba(0, 0, 0, 0.6);
-  animation: fadeIn 0.3s ease;
 }
 
 .modal-content {
@@ -2692,24 +2757,15 @@ faqItems.forEach(item => {
   color: #0a3a22;
   cursor: pointer;
 }
-
 .close:hover { color: #0aa447; }
 
-@keyframes slideIn {
-  to { opacity: 1; transform: translateY(0);}
-}
-@keyframes fadeIn {
-  from {opacity: 0;}
-  to {opacity: 1;}
-}
-@keyframes scaleIn {
-  to {opacity:1; transform: scale(1);}
-}
+@keyframes slideIn { to { opacity: 1; transform: translateY(0);} }
+@keyframes scaleIn { to { opacity:1; transform: scale(1);} }
 
 @media (max-width: 600px) {
-  .badge {font-size: 0.9rem; padding: 10px 16px;}
-  .footer-main {text-align: center;}
-  .modal-content {width: 90%;}
+  .footer-section { padding: 60px 1rem 30px; }
+  .badge { font-size: 0.85rem; padding: 10px 14px; }
+  .footer-main { text-align: center; gap: 28px; }
 }
 </style>
 
@@ -2730,6 +2786,7 @@ window.onclick = (e) => {
   if (e.target === refundModal) refundModal.style.display = "none";
 };
 </script>
+
 
 
 

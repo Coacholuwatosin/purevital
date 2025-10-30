@@ -6,7 +6,7 @@
   --card: #ffffff;
   --muted: #6b6b6b;
   --accent: #0a8c3e;
-  --accent-2: #2fb86e;
+  --accent-2: #2fb851;
   --accent-warm: #ffb86b;
   --glass: rgba(255, 255, 255, 0.72);
   --shadow-soft: 0 6px 20px rgba(16, 24, 40, 0.06);
@@ -41,7 +41,7 @@ html, body {
 }
 
 body {
-  background: linear-gradient(180deg, #fbfbf9 0%, #f7f8f6 100%);
+  background: linear-gradient(180deg, #ffffff 0%, #ffffff 100%);
   color: #0b1320;
   font-size: var(--text-regular);
   line-height: var(--line-height);
@@ -147,7 +147,10 @@ body {
   position: fixed;
   right: 18px;
   bottom: 18px;
-  background: linear-gradient(180deg, #25d366, #128c7e);
+  background: linear-gradient(180deg, #01a44a, #042812);
+  /* background: linear-gradient(135deg, #ff7e5f, #feb47b); */
+  /* background: linear-gradient(135deg, #ff542a, #f9bc2f); */
+
   color: white;
   padding: 12px 14px;
   border-radius: 999px;
