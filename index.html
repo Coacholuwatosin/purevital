@@ -43,6 +43,8 @@
 
 
 <!-- ========== HEADER (Purevital Living) ========== -->
+
+
 <header class="site-header" role="banner">
   <nav class="nav container" role="navigation" aria-label="Main navigation">
     <a class="brand" href="/" aria-label="Purevital Living Home">
@@ -60,27 +62,26 @@
     </button>
 
     <div class="nav-right" id="primary-menu">
-      <a class="btn btn-ghost" href="#products">Products</a>
-      <a class="btn btn-ghost" href="#about">About</a>
-      <a class="btn btn-primary" 
+      <a class="headerbtn btn-primary" 
          href="https://wa.me/2348123456789?text=Hello%2C%20I%20want%20to%20order%20Neolife%20Chelated%20Cal-Mag" 
          target="_blank" 
          rel="noopener noreferrer"
-         aria-label="Order Neolife products on WhatsApp">
-         Order on WhatsApp
+         aria-label="Order Neolife Cheleted Cal-Mag">
+         Order Now
       </a>
     </div>
   </nav>
 </header>
+
 <style>
 .site-header {
   position: sticky;
   top: 0;
   z-index: 100;
-  backdrop-filter: blur(10px);
-  background: rgba(255, 255, 255, 0.82);
-  border-bottom: 1px solid rgba(0, 0, 0, 0.05);
-  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.04);
+  backdrop-filter: blur(12px) saturate(180%);
+  background: rgba(255, 255, 255, 0.22);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.3);
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.1);
   transition: background 0.3s ease, box-shadow 0.3s ease;
 }
 
@@ -106,15 +107,16 @@
   width: 44px;
   height: 44px;
   object-fit: contain;
-  border-radius: 10px;
-  background: var(--surface);
-  box-shadow: var(--shadow-soft);
+  border-radius: 12px;
+  background: rgba(255, 255, 255, 0.5);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
   padding: 6px;
-  transition: transform 0.3s ease;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
 .brand:hover .brand-logo {
-  transform: rotate(-5deg) scale(1.05);
+  transform: scale(1.05);
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.15);
 }
 
 .nav-right {
@@ -123,7 +125,6 @@
   gap: 12px;
 }
 
-/* Mobile toggle (hamburger) */
 .nav-toggle {
   background: none;
   border: none;
@@ -144,57 +145,51 @@
   padding: 0;
   margin: -1px;
   overflow: hidden;
-  clip: rect(0, 0, 0, 0);
+  clip: rect(0,0,0,0);
   border: 0;
 }
 
-/* Buttons */
-.btn {
+.headerbtn {
   display: inline-flex;
   align-items: center;
+  justify-content: center;
   gap: 10px;
-  padding: 10px 16px;
-  border-radius: 12px;
-  font-weight: 600;
+  padding: 12px 22px;
+  border-radius: 10px;
+  font-weight: 700;
   text-decoration: none;
-  border: 1px solid transparent;
+  border: none;
   cursor: pointer;
   transition: all 0.25s ease;
 }
 
-.btn:hover {
+.headerbtn:hover {
   transform: translateY(-2px);
-  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.05);
+  box-shadow: 0 8px 24px rgba(0,0,0,0.12);
 }
 
-.btn-ghost {
-  color: var(--muted);
-  background: transparent;
-}
-
-.btn-primary {
-  background: linear-gradient(90deg, var(--accent), var(--accent-2));
+/* .headerbtn-primary {
+  background: linear-gradient(90deg, #FF4E50, #F9D423);
   color: #fff;
-  box-shadow: var(--shadow-soft);
-  font-weight: 700;
-  border: none;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.12);
 }
 
-.btn-primary:hover {
-  opacity: 0.9;
-}
+.headerbtn-primary:hover {
+  opacity: 0.95;
+} */
 
 @media (max-width: 768px) {
   .nav-right {
     position: absolute;
     top: 64px;
-    right: 24px;
+    right: 16px;
     flex-direction: column;
     gap: 14px;
-    background: rgba(255, 255, 255, 0.96);
+    background: rgba(255, 255, 255, 0.15);
+    backdrop-filter: blur(10px) saturate(180%);
     border-radius: 16px;
     padding: 16px;
-    box-shadow: 0 12px 36px rgba(0, 0, 0, 0.08);
+    box-shadow: 0 12px 36px rgba(0, 0, 0, 0.15);
     display: none;
   }
 
@@ -206,17 +201,16 @@
     display: flex;
   }
 }
-
 </style>
 
 <script>
-  const toggle = document.querySelector('.nav-toggle');
-  const menu = document.querySelector('#primary-menu');
+const toggle = document.querySelector('.nav-toggle');
+const menu = document.querySelector('#primary-menu');
 
-  toggle.addEventListener('click', () => {
-    const isOpen = menu.classList.toggle('active');
-    toggle.setAttribute('aria-expanded', isOpen);
-  });
+toggle.addEventListener('click', () => {
+  const isOpen = menu.classList.toggle('active');
+  toggle.setAttribute('aria-expanded', isOpen);
+});
 </script>
 
 
@@ -226,53 +220,71 @@
 
 
 
-  <main>
 
 
 
 
 
-<!-- ========== HERO SECTION ========== -->
+
+
+
+
+
+
+
+
+
+
+
+<main>
+
+
+
+
+
+<!-- ==== HERO SECTION ==== -->
 
 
 <section class="hero" id="home" role="region" aria-labelledby="hero-heading">
   <div class="container hero-grid">
     <div class="hero-copy">
-      <p class="eyebrow">
-        <i class="ri-verified-badge-fill"></i> Verified Neolife Product • Nationwide Delivery
-      </p>
+      <p class="hero-eyebrow"></p>
 
-      <h1 id="hero-heading">
-        <span class="accent">Chelated Cal-Mag</span>
+      <div class="hero-rating-wrapper" title="Rated by real customers">
+        <span class="hero-rating">
+          <i class="ri-star-fill"></i>
+          <i class="ri-star-fill"></i>
+          <i class="ri-star-fill"></i>
+          <i class="ri-star-fill"></i>
+          <i class="ri-star-half-fill"></i>
+        </span>
+        <span class="hero-rating-count">4.9/5 • 1200+ reviews</span>
+      </div>
+
+      <h1 id="hero-heading" class="hero-title">
+        <span class="hero-accent">Chelated Cal-Mag</span>
       </h1>
 
-      <p class="lead">
-        Stronger bones, calmer muscles, and deeper sleep — clinically designed for maximum absorption and gentle on the stomach.
+      <p class="hero-lead">
+        Unlock stronger bones, relaxed muscles, and deeper, restorative sleep — scientifically formulated for maximum absorption and gentle on your stomach.
       </p>
 
       <div class="hero-ctas">
-        <a class="btn btn-primary large"
+        <a class="hero-btn hero-btn-primary large"
            href="https://wa.me/2348123456789?text=Hello%2C%20I%20want%20to%20order%20Neolife%20Chelated%20Cal-Mag"
            target="_blank" rel="noopener noreferrer">
           <i class="ri-whatsapp-fill"></i> Order Now
         </a>
-        <a class="btn btn-outline" href="#learn">
+        <a class="hero-btn hero-btn-outline large" href="#learn">
           <i class="ri-lightbulb-flash-fill"></i> How it works
         </a>
       </div>
     </div>
 
     <div class="hero-visual" aria-label="Chelated Cal-Mag video">
-      <div class="video-wrapper">
-        <!-- Replace the URL below with your actual YouTube video link -->
-        <iframe
-          src="https://www.youtube.com/embed/dQw4w9WgXcQ"
-          title="Chelated Cal-Mag Video"
-          frameborder="0"
-          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-          allowfullscreen
-          loading="lazy">
-        </iframe>
+      <div class="hero-video-wrapper" id="video-wrapper" 
+           style="background-image:url('https://img.youtube.com/vi/dQw4w9WgXcQ/hqdefault.jpg');">
+        <div class="play-button" id="play-button"></div>
       </div>
     </div>
   </div>
@@ -280,7 +292,7 @@
 
 <style>
 .hero {
-  padding: 90px 0 110px;
+  padding: 90px 20px 110px;
   background: linear-gradient(180deg, #f6fff9 0%, #ffffff 100%);
   overflow: hidden;
 }
@@ -292,19 +304,50 @@
   align-items: center;
 }
 
-.eyebrow {
+.hero-eyebrow {
   color: var(--accent);
   font-weight: 700;
-  margin-bottom: 16px;
+  margin-bottom: 8px;
   letter-spacing: 0.4px;
   font-size: 0.95rem;
   display: flex;
   align-items: center;
   gap: 6px;
   text-transform: uppercase;
+  flex-wrap: wrap;
+  word-break: break-word;
 }
 
-h1 {
+.hero-rating-wrapper {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 16px;
+  flex-wrap: wrap;
+}
+
+.hero-rating {
+  display: flex;
+  gap: 3px;
+  font-size: 1.5rem;
+  background: linear-gradient(90deg, #f7d54e, #f18f01);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  animation: starShine 2s infinite alternate;
+}
+
+@keyframes starShine {
+  0% { filter: brightness(0.9); }
+  100% { filter: brightness(1.2); }
+}
+
+.hero-rating-count {
+  color: #27ae60;
+  font-size: 1rem;
+  font-weight: 700;
+}
+
+.hero-title {
   margin: 0 0 20px;
   font-size: 2.8rem;
   line-height: 1.08;
@@ -313,14 +356,15 @@ h1 {
   letter-spacing: -0.5px;
 }
 
-.lead {
+.hero-lead {
   margin: 0 0 34px;
   color: var(--muted);
   font-size: 1.18rem;
   max-width: 520px;
+  word-break: break-word;
 }
 
-.accent {
+.hero-accent {
   background: linear-gradient(90deg, var(--accent), var(--accent-2));
   -webkit-background-clip: text;
   background-clip: text;
@@ -333,54 +377,85 @@ h1 {
   gap: 16px;
 }
 
-.btn.large {
+.hero-btn.large {
   padding: 16px 28px;
   font-size: 1rem;
   border-radius: 12px;
   transition: all 0.3s ease;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  text-decoration: none;
 }
 
-.btn i {
+.hero-btn i {
   font-size: 1.2rem;
   margin-right: 6px;
   vertical-align: middle;
 }
 
-.btn-primary {
-  background: var(--accent);
+.hero-btn-primary {
+  background: linear-gradient(135deg, #6fcf97, #27ae60);
   color: #fff;
   border: none;
 }
 
-.btn-primary:hover {
-  background: var(--accent-2);
+.hero-btn-primary:hover {
+  background: linear-gradient(135deg, #27ae60, #6fcf97);
   transform: translateY(-2px);
 }
 
-.btn-outline {
+.hero-btn-outline {
   border: 2px solid var(--accent);
   color: var(--accent);
   background: transparent;
 }
 
-.btn-outline:hover {
+.hero-btn-outline:hover {
   background: var(--accent);
   color: #fff;
   transform: translateY(-2px);
 }
 
-/* ===== Video Styling ===== */
-.video-wrapper {
+.hero-video-wrapper {
   position: relative;
   width: 100%;
-  padding-bottom: 56.25%; /* 16:9 ratio */
+  max-width: 480px;
+  margin: 0 auto;
+  padding-bottom: 70%;
   border-radius: 16px;
   overflow: hidden;
   box-shadow: 0 12px 36px rgba(0, 0, 0, 0.08);
-  background: #000;
+  background: #000 center/cover no-repeat;
+  cursor: pointer;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
-.video-wrapper iframe {
+.hero-video-wrapper:hover {
+  transform: scale(1.03);
+  box-shadow: 0 18px 48px rgba(0, 0, 0, 0.15);
+}
+
+.play-button {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 64px;
+  height: 64px;
+  background: rgba(255,255,255,0.8) url('data:image/svg+xml;utf8,<svg fill="none" viewBox="0 0 24 24" stroke="black" stroke-width="2" xmlns="http://www.w3.org/2000/svg"><path d="M5 3v18l15-9-15-9z"/></svg>') center/50% no-repeat;
+  border-radius: 50%;
+  transform: translate(-50%, -50%);
+  cursor: pointer;
+  animation: pulse 1.5s infinite;
+}
+
+@keyframes pulse {
+  0% { transform: translate(-50%, -50%) scale(1); opacity: 0.8; }
+  50% { transform: translate(-50%, -50%) scale(1.1); opacity: 1; }
+  100% { transform: translate(-50%, -50%) scale(1); opacity: 0.8; }
+}
+
+.hero-video-wrapper iframe {
   position: absolute;
   top: 0;
   left: 0;
@@ -392,9 +467,10 @@ h1 {
 
 .hero-visual {
   position: relative;
+  display: flex;
+  justify-content: center;
 }
 
-/* ===== Responsive Styles ===== */
 @media (max-width: 1024px) {
   .hero-grid {
     gap: 48px;
@@ -416,39 +492,59 @@ h1 {
   .hero-ctas {
     justify-content: center;
   }
-  h1 {
+  .hero-title {
     font-size: 2.4rem;
   }
-  .lead {
+  .hero-lead {
     font-size: 1rem;
     margin: 0 auto 26px;
   }
-  .video-wrapper {
+  .hero-eyebrow {
+    font-size: 0.9rem;
+    text-align: center;
+    justify-content: center;
+  }
+  .hero-rating-wrapper {
+    justify-content: center;
+  }
+  .hero-video-wrapper {
     max-width: 90%;
-    margin: 0 auto;
+    padding-bottom: 75%;
   }
 }
 
 @media (max-width: 540px) {
   .hero {
-    padding: 70px 0 90px;
+    padding: 70px 15px 90px;
   }
-  h1 {
+  .hero-title {
     font-size: 2rem;
   }
-  .lead {
+  .hero-lead {
     font-size: 0.95rem;
   }
-  .btn.large {
+  .hero-btn.large {
     width: 100%;
-    justify-content: center;
   }
-  .video-wrapper {
+  .hero-video-wrapper {
     max-width: 100%;
+    padding-bottom: 80%;
   }
 }
 </style>
 
+<script>
+const wrapper = document.getElementById('video-wrapper');
+const playBtn = document.getElementById('play-button');
+playBtn.addEventListener('click', () => {
+  const iframe = document.createElement('iframe');
+  iframe.src = "https://www.youtube.com/embed/dQw4w9WgXcQ?autoplay=1";
+  iframe.allow = "accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture";
+  iframe.allowFullscreen = true;
+  wrapper.innerHTML = '';
+  wrapper.appendChild(iframe);
+});
+</script>
 
 
 
@@ -466,14 +562,20 @@ h1 {
 
 
 
-<!-- 30 DAYS GUARANTEE -->
 
+
+
+
+
+
+
+
+<!-- ==== GUARANTEED SECTION ==== -->
 
 
 <section class="trust-guarantee" id="guarantee">
   <div class="container trust-grid">
 
-    <!-- Left: Cards -->
     <div class="trust-visual">
       <div class="card-grid">
         <div class="trust-item">
@@ -494,9 +596,8 @@ h1 {
       </div>
     </div>
 
-    <!-- Right: Copy -->
     <div class="trust-copy">
-      <h2>Guaranteed Results, Loved by 300+ Nigerians</h2>
+      <h2>Guaranteed Results, Loved by 628+ Nigerians</h2>
       <p>Our <strong>Chelated Cal-Mag</strong> is clinically designed for maximum absorption and gentle on the stomach. Use it for 30 days, and if you don’t feel improvements in <strong>sleep, stress, or joint health</strong>, we’ll refund you <strong>100%</strong>.</p>
       <p><strong>Backed by science, trusted by real users</strong> — feel the difference in as little as 14 days.</p>
       <a href="https://wa.me/2348123456789?text=Hello%2C%20I%20want%20to%20order%20Neolife%20Chelated%20Cal-Mag" 
@@ -518,7 +619,7 @@ h1 {
 .trust-grid {
   display: flex;
   gap: 60px;
-  align-items: stretch; /* Ensure left and right match height */
+  align-items: stretch;
   flex-wrap: wrap;
 }
 
@@ -534,7 +635,7 @@ h1 {
 }
 
 .card-grid .trust-item:nth-child(3) {
-  grid-column: 1 / span 2; /* Third card spans both columns */
+  grid-column: 1 / span 2;
 }
 
 .trust-item {
@@ -556,9 +657,26 @@ h1 {
 
 .trust-item i {
   font-size: 2rem;
-  color: var(--accent);
   margin-bottom: 10px;
 }
+
+.trust-item i {
+  font-size: 2rem;
+  margin-bottom: 10px;
+}
+
+.trust-item:nth-child(1) i {
+  color: #1e90ff; 
+}
+
+.trust-item:nth-child(2) i {
+  color: #f39c12; 
+}
+
+.trust-item:nth-child(3) i {
+  color: #8e44ad; 
+}
+
 
 .trust-item h4 {
   font-size: 1.1rem;
@@ -576,7 +694,7 @@ h1 {
   flex: 1;
   display: flex;
   flex-direction: column;
-  justify-content: center; /* Center content vertically */
+  justify-content: center;
 }
 
 .trust-copy h2 {
@@ -596,9 +714,31 @@ h1 {
 
 .trust-copy .btn {
   margin-top: 12px;
+  padding: 16px 28px;
+  font-size: 1rem;
+  border-radius: 12px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  text-decoration: none;
+  background: linear-gradient(135deg, #6fcf97, #27ae60);
+  color: #fff;
+  border: none;
+  transition: all 0.3s ease;
+  box-shadow: 0 6px 16px rgba(0,0,0,0.12);
 }
 
-/* Responsive */
+.trust-copy .btn:hover {
+  background: linear-gradient(135deg, #27ae60, #6fcf97);
+  transform: translateY(-2px);
+  box-shadow: 0 10px 26px rgba(0,0,0,0.18);
+}
+
+.trust-copy .btn i {
+  font-size: 1.2rem;
+  margin-right: 8px;
+}
+
 @media (max-width: 1024px) {
   .trust-grid {
     flex-direction: column;
@@ -634,8 +774,14 @@ h1 {
   .card-grid .trust-item:nth-child(3) {
     grid-column: 1;
   }
+
+  .trust-copy .btn {
+    width: 100%;
+    justify-content: center;
+  }
 }
 </style>
+
 
 
 
@@ -647,83 +793,260 @@ h1 {
 
 
 
-<!-- ========== WHY IT MATTERS ========== -->
+
+<!-- ==== COUNTDOWN SECTION ==== -->
 
 
-<section id="learn" class="how container">
-  <header class="how-header">
-    <h2 class="section-title">Why Your Body Needs Cal-Mag</h2>
-    <p class="subtitle">
-      It’s not age. It’s not stress. It’s <strong>deficiency</strong>. When your Magnesium, Calcium, and Vitamin D levels drop, your body starts sounding the alarm: cramps, fatigue, restless sleep. Neolife <strong>Chelated Cal-Mag</strong> helps restore calm, balance, and vitality from within.
+
+<section class="countdown-section">
+  <div class="countdown-content">
+    <h2 class="countdown-title">
+      Limited-Time Offer: <span>Save 20% Today</span>
+    </h2>
+    <p class="countdown-subtitle">
+      Hurry! this special price ends in:
     </p>
-  </header>
 
-  <div class="how-grid">
-    <div class="how-card">
-      <div class="icon-wrapper"><i class="ri-link-m"></i></div>
-      <h3>Why Chelated?</h3>
-      <p><strong>Chelation</strong> binds minerals to amino acids for superior absorption so Calcium and Magnesium reach your bones, muscles, and nerves efficiently.</p>
+    <div class="countdown-timer" id="countdown">
+      <div class="time-box">
+        <span class="number" id="hours">18</span>
+        <span class="label">Hours</span>
+      </div>
+      <div class="time-box">
+        <span class="number" id="minutes">53</span>
+        <span class="label">Minutes</span>
+      </div>
+      <div class="time-box">
+        <span class="number" id="seconds">59</span>
+        <span class="label">Seconds</span>
+      </div>
     </div>
 
-    <div class="how-card">
-      <div class="icon-wrapper"><i class="ri-user-heart-fill"></i></div>
-      <h3>Who Is It For?</h3>
-      <p>Students, professionals, older adults, and active people seeking stronger bones, calmer muscles, and restorative sleep naturally.</p>
-    </div>
+    <a href="#order" class="countdown-btn">Claim Offer Now</a>
+  </div>
+</section>
 
-    <div class="how-card how-benefit">
-      <div class="icon-wrapper"><i class="ri-capsule-fill"></i></div>
-      <h3>Key Ingredients</h3>
-      <ul>
-        <li><i class="ri-checkbox-circle-fill"></i><strong>Calcium:</strong> Strong bones and teeth</li>
-        <li><i class="ri-checkbox-circle-fill"></i><strong>Magnesium:</strong> Calms muscles and supports sleep</li>
-        <li><i class="ri-checkbox-circle-fill"></i><strong>Vitamin D3:</strong> Enhances calcium uptake and balance</li>
-      </ul>
+<style>
+.countdown-section {
+  /* background: linear-gradient(135deg, #0aa447, #0cd68b); */
+  background: linear-gradient(135deg, #f9722f, #f9912f);
+  /* background-color: #F9A52F; */
+  color: #fff;
+  padding: 80px 1.5rem;
+  text-align: center;
+}
+
+.countdown-content {
+  max-width: 700px;
+  margin: 0 auto;
+}
+
+.countdown-title {
+  font-size: clamp(1.8rem, 4vw, 2.2rem);
+  font-weight: 800;
+  margin-bottom: 12px;
+}
+.countdown-title span {
+  color: #e6ffcc;
+}
+
+.countdown-subtitle {
+  font-size: 1.1rem;
+  margin-bottom: 40px;
+  opacity: 0.95;
+}
+
+.countdown-timer {
+  display: flex;
+  justify-content: center;
+  gap: 18px;
+  flex-wrap: wrap;
+  margin-bottom: 40px;
+}
+
+.time-box {
+  background: rgba(255, 255, 255, 0.15);
+  border-radius: 16px;
+  width: 100px;
+  padding: 18px 0;
+  box-shadow: 0 4px 20px rgba(0,0,0,0.1);
+  transition: transform 0.3s ease;
+}
+.time-box:hover {
+  transform: translateY(-5px);
+}
+.number {
+  display: block;
+  font-size: 2rem;
+  font-weight: 700;
+  letter-spacing: 1px;
+  color: #fff;
+}
+.label {
+  display: block;
+  font-size: 0.85rem;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  /* color: white !important; */
+  /* background: linear-gradient(135deg, #0aa447, #0cd68b); */
+  background-color: yellow;
+}
+
+.countdown-btn {
+  display: inline-block;
+  background: #fff;
+  color: #0aa447;
+  padding: 16px 38px;
+  border-radius: 50px;
+  font-weight: 700;
+  font-size: 1rem;
+  text-decoration: none;
+  transition: all 0.3s ease;
+}
+.countdown-btn:hover {
+  background: #fff8cc;
+  transform: translateY(-3px);
+}
+
+@media (max-width: 600px) {
+  .time-box {
+    width: 80px;
+    padding: 14px 0;
+  }
+  .number {
+    font-size: 1.6rem;
+  }
+}
+</style>
+
+<script>
+// Countdown starting from 18h 53m 59s
+let totalSeconds = 18 * 3600 + 53 * 60 + 59;
+
+const hoursEl = document.getElementById('hours');
+const minutesEl = document.getElementById('minutes');
+const secondsEl = document.getElementById('seconds');
+
+function updateCountdown() {
+  if (totalSeconds <= 0) {
+    document.getElementById('countdown').innerHTML = "<p>Offer has ended!</p>";
+    return;
+  }
+
+  const hours = Math.floor(totalSeconds / 3600);
+  const minutes = Math.floor((totalSeconds % 3600) / 60);
+  const seconds = totalSeconds % 60;
+
+  hoursEl.textContent = String(hours).padStart(2, '0');
+  minutesEl.textContent = String(minutes).padStart(2, '0');
+  secondsEl.textContent = String(seconds).padStart(2, '0');
+
+  totalSeconds--;
+}
+
+setInterval(updateCountdown, 1000);
+updateCountdown();
+</script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!-- ==== WHY IT MATTERS ==== -->
+
+
+<section id="learn" class="how-matter-con">
+  <div class="how container">
+
+    <header class="how-header">
+      <h2 class="section-title">Why Your Body Needs Cal-Mag?</h2>
+      <p class="subtitle">
+        It’s not age. It’s not stress. It’s <strong>deficiency</strong>.<br>
+        When Magnesium, Calcium, and Vitamin D levels drop, your body starts sounding the alarm: cramps, fatigue, restless sleep.<br>
+        <strong>Neolife Chelated Cal-Mag</strong> helps restore calm, balance, and vitality from within.
+      </p>
+    </header>
+  
+    <div class="how-grid">
+      <div class="how-card">
+        <div class="icon-wrapper" style="background: linear-gradient(135deg, #ff7e5f, #feb47b);"><i class="ri-link-m"></i></div>
+        <h3>Why Chelated?</h3>
+        <p><strong>Chelation</strong> binds minerals to amino acids for superior absorption so Calcium and Magnesium reach your bones, muscles, and nerves efficiently.</p>
+      </div>
+  
+      <div class="how-card">
+        <div class="icon-wrapper" style="background: linear-gradient(135deg, #6a11cb, #2575fc);"><i class="ri-user-heart-fill"></i></div>
+        <h3>Who Is It For?</h3>
+        <p>Students, professionals, older adults, and active people seeking stronger bones, calmer muscles, and restorative sleep naturally.</p>
+      </div>
+  
+      <div class="how-card how-benefit">
+        <div class="icon-wrapper" style="background: linear-gradient(135deg, #0abc6c, #00b894);"><i class="ri-capsule-fill"></i></div>
+        <h3>Key Ingredients</h3>
+        <ul>
+          <li><i class="ri-checkbox-circle-fill"></i><strong>Calcium: </strong> Strong bones and teeth</li>
+          <li><i class="ri-checkbox-circle-fill"></i><strong>Magnesium: </strong> Calms muscles and supports sleep</li>
+          <li><i class="ri-checkbox-circle-fill"></i><strong>Vitamin D3: </strong> Enhances calcium uptake and balance</li>
+        </ul>
+      </div>
     </div>
   </div>
 </section>
 
 <style>
+
+.how-matter-con{
+
+  background: linear-gradient(180deg, #f9fef9, #ffffff 40%, #fefef4);
+}
+
 .how {
   padding: 100px 2rem;
-  background: linear-gradient(180deg, #f9fefb, #ffffff 40%, #f4fff8);
   color: #0d2618;
-  font-family: 'Inter', sans-serif;
 }
 .how-header {
   text-align: center;
-  max-width: 75ch;
+  max-width: 70ch;
   margin: 0 auto 60px;
 }
 .section-title {
-  font-size: clamp(1.8rem, 4vw, 2.2rem);
+  font-size: clamp(1.8rem, 4vw, 2.4rem);
   font-weight: 800;
   color: #0d2618;
   letter-spacing: -0.02em;
+  margin-bottom: 16px;
 }
 .subtitle {
-  font-size: clamp(1rem, 2vw, 1.1rem);
+  font-size: clamp(1rem, 2vw, 1.15rem);
   color: #4a4a4a;
-  line-height: 1.8;
-  margin-top: 14px;
+  line-height: 1.9;
+  margin-top: 0;
 }
 .how-grid {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
   grid-template-rows: auto auto;
-  gap: 32px;
-  justify-content: center;
-  align-items: stretch;
+  gap: 36px;
   max-width: 1200px;
   margin: 0 auto;
 }
 .how-card {
-  background: rgba(255,255,255,0.9);
-  backdrop-filter: blur(14px);
+  background: #fff;
   padding: 32px;
   border-radius: 24px;
-  border: 1px solid rgba(10,140,62,0.15);
-  box-shadow: 0 16px 40px rgba(0,0,0,0.05);
+  box-shadow: 0 16px 40px rgba(0,0,0,0.06);
   transition: transform 0.4s ease, box-shadow 0.4s ease;
   text-align: left;
   display: flex;
@@ -740,27 +1063,26 @@ h1 {
 .icon-wrapper {
   width: 60px;
   height: 60px;
-  background: linear-gradient(135deg, #0abc6c, #0cd68b);
-  color: white;
   border-radius: 50%;
   display: flex;
   align-items: center;
   justify-content: center;
   margin-bottom: 18px;
   font-size: 1.5rem;
-  box-shadow: 0 6px 18px rgba(10,140,62,0.25);
+  color: #fff;
+  box-shadow: 0 6px 18px rgba(0,0,0,0.2);
 }
 .how-card h3 {
-  font-size: 1.35rem;
+  font-size: 1.4rem;
   font-weight: 700;
-  margin-bottom: 14px;
+  margin-bottom: 12px;
   color: #0a3a22;
 }
 .how-card p,
 .how-card ul {
   font-size: 1rem;
   color: #0d2618;
-  line-height: 1.7;
+  line-height: 1.75;
 }
 .how-card ul {
   list-style: none;
@@ -772,14 +1094,12 @@ h1 {
 .how-card ul li {
   display: flex;
   align-items: flex-start;
-  line-height: 1.6;
 }
 .how-card ul i {
   color: #0abc6c;
   font-size: 1.2rem;
   margin-right: 8px;
   margin-top: 2px;
-  flex-shrink: 0;
 }
 .how-card ul strong {
   font-weight: 600;
@@ -813,7 +1133,8 @@ h1 {
     font-size: 1.6rem;
   }
   .subtitle {
-    font-size: 0.9rem;
+    font-size: 0.95rem;
+    line-height: 1.6;
   }
 }
 </style>
@@ -833,89 +1154,116 @@ h1 {
 
 
 
-<!-- ========== BENEFITS SECTION ========== -->
+<!-- ==== BENEFITS SECTION ==== -->
 
-<section class="benefits-section container">
-  <div class="benefits-header">
-    <h3 class="benefits-title"><i class="ri-heart-pulse-fill"></i> One Supplement. Many Benefits.</h3>
-    <p class="benefits-subtitle">
-      Feel the difference in your <strong>sleep, energy, mood, and mobility</strong> in as little as 14 days — backed by science, loved by 300+ Nigerians.
-    </p>
-  </div>
 
-  <div class="benefits-showcase">
-    <div class="benefits-column">
-      <div class="benefit-item"><i class="ri-run-fill"></i><span>Relieves cramps & joint pain</span></div>
-      <div class="benefit-item"><i class="ri-moon-clear-fill"></i><span>Promotes deep, restorative sleep</span></div>
-      <div class="benefit-item"><i class="ri-emotion-happy-fill"></i><span>Boosts daily energy & mood balance</span></div>
-      <div class="benefit-item"><i class="ri-capsule-fill"></i><span>Reduces Cramps</span></div>
+<section class="benefits-section"> 
+  <div class="benefits-container container">
+    <div class="benefits-header">
+      <h3 class="benefits-title"><i class="ri-heart-pulse-fill"></i> One Supplement. Many Benefits.</h3>
+      <p class="benefits-subtitle">
+        Feel the difference in your <strong>sleep, energy, mood, and mobility</strong> in as little as 14 days — backed by science, loved by 300+ Nigerians.
+      </p>
     </div>
-    
-    <div class="benefits-image">
-      <img src="assets/calmag.PNG" alt="Cal-Mag Bottle">
-    </div>
-    
-    <div class="benefits-column">
-      <div class="benefit-item"><i class="ri-heart-3-fill"></i><span>Supports heart health & blood pressure</span></div>
-      <div class="benefit-item"><i class="ri-brain-fill"></i><span>Improves focus & mental clarity</span></div>
-      <div class="benefit-item"><i class="ri-user-smile-fill"></i><span>Gentle on the stomach, suitable for all ages</span></div>
-      <div class="benefit-item"><i class="ri-shield-check-fill"></i><span>Pure formula — no fillers, no additives</span></div>
+  
+    <div class="benefits-showcase">
+      <div class="benefits-column">
+        <div class="benefit-item"><i class="ri-run-fill"></i><span>Relieves cramps & joint pain</span></div>
+        <div class="benefit-item"><i class="ri-moon-clear-fill"></i><span>Promotes deep, restorative sleep</span></div>
+        <div class="benefit-item"><i class="ri-emotion-happy-fill"></i><span>Boosts daily energy & mood balance</span></div>
+        <div class="benefit-item"><i class="ri-capsule-fill"></i><span>Reduces Cramps</span></div>
+      </div>
+      
+      <div class="benefits-image">
+        <img src="assets/calmag.PNG" alt="Cal-Mag Bottle">
+      </div>
+      
+      <div class="benefits-column">
+        <div class="benefit-item"><i class="ri-heart-3-fill"></i><span>Supports heart health & blood pressure</span></div>
+        <div class="benefit-item"><i class="ri-brain-fill"></i><span>Improves focus & mental clarity</span></div>
+        <div class="benefit-item"><i class="ri-user-smile-fill"></i><span>Gentle on the stomach, suitable for all ages</span></div>
+        <div class="benefit-item"><i class="ri-shield-check-fill"></i><span>Pure formula — no fillers, no additives</span></div>
+      </div>
     </div>
   </div>
 </section>
 
 <style>
-.benefits-section {
-  max-width: 1200px;
+
+.benefits-section{
+  background-color: white;
+  padding: 50px 0;
+}
+
+
+.benefits-container {
   margin: 120px auto;
-  padding: 0 1.5rem;
+  padding: 50px 2rem;
   font-family: 'Inter', sans-serif;
   color: #0d2618;
   text-align: center;
+  border: 2px solid #0aa44859;
+  border-radius: 20px;
+  background: linear-gradient(135deg, #ffffff, #ffffff);
+  box-shadow: 0 15px 35px rgba(10, 140, 62, 0.12);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
+
+.benefits-container:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 25px 50px rgba(10, 140, 62, 0.18);
+}
+
 .benefits-header {
   margin-bottom: 60px;
 }
+
 .benefits-title {
-  font-size: clamp(1.9rem, 4vw, 2.4rem);
+  font-size: clamp(1.9rem, 4vw, 2.6rem);
   font-weight: 800;
   color: #062d18;
   display: flex;
-  align-items: center;
+  flex-wrap: wrap; 
   justify-content: center;
   gap: 0.6rem;
   margin-bottom: 16px;
 }
 .benefits-title i {
   color: #0aa447;
-  font-size: 1.9rem;
+  font-size: 2rem;
+  flex-basis: 100%; 
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
+
 .benefits-subtitle {
-  font-size: clamp(1rem, 2vw, 1.1rem);
+  font-size: clamp(1rem, 2vw, 1.2rem);
   color: #4c6656;
-  max-width: 700px;
+  max-width: 720px;
   margin: 0 auto;
-  line-height: 1.7;
+  line-height: 1.8;
 }
+
 .benefits-showcase {
   display: grid;
-  grid-template-columns: 1fr 0.8fr 1fr;
+  grid-template-columns: 1fr 1.3fr 1fr;
   align-items: center;
-  gap: 36px;
+  gap: 48px;
 }
 .benefits-column {
   display: flex;
   flex-direction: column;
-  gap: 18px;
+  gap: 20px;
 }
 .benefit-item {
   background: linear-gradient(135deg, #ffffff 0%, #f1fcf6 100%);
-  padding: 18px 20px;
-  border-radius: 16px;
-  box-shadow: 0 10px 26px rgba(0, 0, 0, 0.05);
+  padding: 18px 22px;
+  border-radius: 18px;
+  box-shadow: 0 12px 28px rgba(0, 0, 0, 0.06);
   display: flex;
   align-items: center;
-  gap: 12px;
+  gap: 14px;
   font-weight: 600;
   font-size: 1rem;
   text-align: left;
@@ -923,26 +1271,68 @@ h1 {
 }
 .benefit-item i {
   color: #0abc6c;
-  font-size: 1.3rem;
+  font-size: 1.4rem;
   flex-shrink: 0;
 }
 .benefit-item:hover {
-  transform: translateY(-4px);
+  transform: translateY(-5px);
   background: linear-gradient(135deg, #fafffb 0%, #e8fbee 100%);
-  box-shadow: 0 16px 38px rgba(10, 140, 62, 0.1);
+  box-shadow: 0 18px 40px rgba(10, 140, 62, 0.12);
+}
+
+@keyframes bounce {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-15px); }
 }
 .benefits-image img {
-  width: 100%;
-  border-radius: 24px;
-  box-shadow: 0 20px 50px rgba(0, 0, 0, 0.08);
+  width: auto;
+  height: 480px; 
+  max-width: 100%;
+  border-radius: 28px;
+  box-shadow: 0 25px 55px rgba(0, 0, 0, 0.09);
+  margin: 0 auto;
+  display: block;
+  animation: bounce 3s ease-in-out infinite;
+  object-fit: contain;
 }
-@media (max-width: 950px) {
+
+@media (max-width: 1050px) {
   .benefits-showcase {
     grid-template-columns: 1fr;
-    text-align: left;
+    text-align: center;
   }
   .benefits-image {
     order: -1;
+    margin-bottom: 40px;
+  }
+  .benefits-column {
+    align-items: center;
+  }
+  .benefit-item {
+    justify-content: center;
+    text-align: center;
+  }
+  .benefits-image img {
+    height: 380px;
+  }
+}
+@media (max-width: 600px) {
+  .benefits-container {
+    margin: 80px auto;
+  }
+  .benefits-title {
+    font-size: 1.9rem;
+  }
+  .benefits-subtitle {
+    font-size: 1rem;
+  }
+  .benefit-item {
+    font-size: 0.95rem;
+    padding: 16px 18px;
+    gap: 10px;
+  }
+  .benefits-image img {
+    height: 280px;
   }
 }
 </style>
@@ -959,83 +1349,133 @@ h1 {
 
 
 
-<!-- TESTIMONIES -->
 
-<section class="testimonials container">
-  <h2 class="section-title"><i class="ri-chat-heart-fill"></i> What Nigerians Are Saying</h2>
+<!-- ==== TESTIMONIAL SECTION ==== -->
+<div class="testimonials-parent">
+  <article class="testimonials-container container">
+    <h2 class="section-title"><i class="ri-chat-heart-fill"></i> What Nigerians Are Saying</h2>
 
-  <div class="slider-wrapper">
-    <button class="slider-btn prev"><i class="ri-arrow-left-s-line"></i></button>
+    <div class="slider-wrapper">
+      <button class="slider-btn prev"><i class="ri-arrow-left-s-line"></i></button>
 
-    <div class="testimonials-slider">
-      <div class="testimonial-card">
-        <div class="testimonial-header">
-          <img src="assets/avatar1.svg" alt="Grace, Benin City" class="avatar">
-          <div><h4>Grace</h4><p class="location">Benin City</p></div>
+      <div class="testimonials-slider">
+        <div class="testimonial-card">
+          <div class="testimonial-header">
+            <img src="assets/avatar1.svg" alt="Grace, Benin City" class="testimonial-avatar">
+            <div>
+              <h4 class="testimonial-name">Grace</h4>
+              <p class="testimonial-location">Benin City</p>
+            </div>
+          </div>
+          <p class="testimonial-quote">My leg cramps stopped completely and my sleep improved. I wake up feeling refreshed!</p>
         </div>
-        <p class="quote">My leg cramps stopped completely and my sleep improved. I wake up feeling refreshed!</p>
+
+        <div class="testimonial-card">
+          <div class="testimonial-header">
+            <img src="assets/avatar2.svg" alt="Emeka, Ibadan" class="testimonial-avatar">
+            <div>
+              <h4 class="testimonial-name">Emeka</h4>
+              <p class="testimonial-location">Ibadan</p>
+            </div>
+          </div>
+          <p class="testimonial-quote">Bought this for my mum and her back pain eased. Genuine product and quick delivery.</p>
+        </div>
+
+        <div class="testimonial-card">
+          <div class="testimonial-header">
+            <img src="assets/avatar3.svg" alt="Aisha, Abuja" class="testimonial-avatar">
+            <div>
+              <h4 class="testimonial-name">Aisha</h4>
+              <p class="testimonial-location">Abuja</p>
+            </div>
+          </div>
+          <p class="testimonial-quote">I was skeptical at first, but after a week my energy levels improved. Totally worth it!</p>
+        </div>
+
+        <div class="testimonial-card">
+          <div class="testimonial-header">
+            <img src="assets/avatar4.svg" alt="Bode, Lagos" class="testimonial-avatar">
+            <div>
+              <h4 class="testimonial-name">Bode</h4>
+              <p class="testimonial-location">Lagos</p>
+            </div>
+          </div>
+          <p class="testimonial-quote">Excellent customer service. The product really does what it says. Highly recommend.</p>
+        </div>
+
+        <div class="testimonial-card">
+          <div class="testimonial-header">
+            <img src="assets/avatar5.svg" alt="Ngozi, Enugu" class="testimonial-avatar">
+            <div>
+              <h4 class="testimonial-name">Ngozi</h4>
+              <p class="testimonial-location">Enugu</p>
+            </div>
+          </div>
+          <p class="testimonial-quote">My husband’s blood pressure stabilized after consistent use. Thank you so much!</p>
+        </div>
+
+        <div class="testimonial-card">
+          <div class="testimonial-header">
+            <img src="assets/avatar6.svg" alt="Tunde, Port Harcourt" class="testimonial-avatar">
+            <div>
+              <h4 class="testimonial-name">Tunde</h4>
+              <p class="testimonial-location">Port Harcourt</p>
+            </div>
+          </div>
+          <p class="testimonial-quote">Affordable, effective, and fast delivery. I’ve already recommended it to my friends.</p>
+        </div>
+
+        <div class="testimonial-card">
+          <div class="testimonial-header">
+            <img src="assets/avatar7.svg" alt="Chioma, Owerri" class="testimonial-avatar">
+            <div>
+              <h4 class="testimonial-name">Chioma</h4>
+              <p class="testimonial-location">Owerri</p>
+            </div>
+          </div>
+          <p class="testimonial-quote">I sleep better, feel lighter, and my mood has improved. This product is a blessing.</p>
+        </div>
+
+        <div class="testimonial-card">
+          <div class="testimonial-header">
+            <img src="assets/avatar8.svg" alt="Hassan, Kaduna" class="testimonial-avatar">
+            <div>
+              <h4 class="testimonial-name">Hassan</h4>
+              <p class="testimonial-location">Kaduna</p>
+            </div>
+          </div>
+          <p class="testimonial-quote">Delivery was fast and the packaging professional. Seeing great results already!</p>
+        </div>
+
+        <div class="testimonial-card">
+          <div class="testimonial-header">
+            <img src="assets/avatar9.svg" alt="Funke, Abeokuta" class="testimonial-avatar">
+            <div>
+              <h4 class="testimonial-name">Funke</h4>
+              <p class="testimonial-location">Abeokuta</p>
+            </div>
+          </div>
+          <p class="testimonial-quote">I noticed improvements in my digestion and energy. This product truly works!</p>
+        </div>
+
+        <div class="testimonial-card">
+          <div class="testimonial-header">
+            <img src="assets/avatar10.svg" alt="Samuel, Jos" class="testimonial-avatar">
+            <div>
+              <h4 class="testimonial-name">Samuel</h4>
+              <p class="testimonial-location">Jos</p>
+            </div>
+          </div>
+          <p class="testimonial-quote">Consistent use has helped me feel more active throughout the day. Great product!</p>
+        </div>
+
       </div>
 
-      <div class="testimonial-card">
-        <div class="testimonial-header">
-          <img src="assets/avatar2.svg" alt="Emeka, Ibadan" class="avatar">
-          <div><h4>Emeka</h4><p class="location">Ibadan</p></div>
-        </div>
-        <p class="quote">Bought this for my mum and her back pain eased. Genuine product and quick delivery.</p>
-      </div>
-
-      <div class="testimonial-card">
-        <div class="testimonial-header">
-          <img src="assets/avatar3.svg" alt="Aisha, Abuja" class="avatar">
-          <div><h4>Aisha</h4><p class="location">Abuja</p></div>
-        </div>
-        <p class="quote">I was skeptical at first, but after a week my energy levels improved. Totally worth it!</p>
-      </div>
-
-      <div class="testimonial-card">
-        <div class="testimonial-header">
-          <img src="assets/avatar4.svg" alt="Bode, Lagos" class="avatar">
-          <div><h4>Bode</h4><p class="location">Lagos</p></div>
-        </div>
-        <p class="quote">Excellent customer service. The product really does what it says. Highly recommend.</p>
-      </div>
-
-      <div class="testimonial-card">
-        <div class="testimonial-header">
-          <img src="assets/avatar5.svg" alt="Ngozi, Enugu" class="avatar">
-          <div><h4>Ngozi</h4><p class="location">Enugu</p></div>
-        </div>
-        <p class="quote">My husband’s blood pressure stabilized after consistent use. Thank you so much!</p>
-      </div>
-
-      <div class="testimonial-card">
-        <div class="testimonial-header">
-          <img src="assets/avatar6.svg" alt="Tunde, Port Harcourt" class="avatar">
-          <div><h4>Tunde</h4><p class="location">Port Harcourt</p></div>
-        </div>
-        <p class="quote">Affordable, effective, and fast delivery. I’ve already recommended it to my friends.</p>
-      </div>
-
-      <div class="testimonial-card">
-        <div class="testimonial-header">
-          <img src="assets/avatar7.svg" alt="Chioma, Owerri" class="avatar">
-          <div><h4>Chioma</h4><p class="location">Owerri</p></div>
-        </div>
-        <p class="quote">I sleep better, feel lighter, and my mood has improved. This product is a blessing.</p>
-      </div>
-
-      <div class="testimonial-card">
-        <div class="testimonial-header">
-          <img src="assets/avatar8.svg" alt="Hassan, Kaduna" class="avatar">
-          <div><h4>Hassan</h4><p class="location">Kaduna</p></div>
-        </div>
-        <p class="quote">Delivery was fast and the packaging professional. Seeing great results already!</p>
-      </div>
+      <button class="slider-btn next"><i class="ri-arrow-right-s-line"></i></button>
     </div>
+  </article>
+</div>
 
-    <button class="slider-btn next"><i class="ri-arrow-right-s-line"></i></button>
-  </div>
-</section>
 
 <style>
 :root {
@@ -1044,28 +1484,42 @@ h1 {
   --muted: #6b7280;
 }
 
-.testimonials {
-  padding: 100px 1rem;
-  background: linear-gradient(180deg, #ffffff, #f4fff8);
+.testimonials-parent {
+  background: linear-gradient(180deg, #d4f5d5, #9ce29b);
+  padding: 80px 1rem;
+}
+
+.testimonials-container {
+  margin: 0 auto;
   font-family: 'Inter', sans-serif;
-  color: var(--dark);
   text-align: center;
-  position: relative;
-  overflow: hidden;
+  color: var(--dark);
+  border-radius: 20px;
+  padding: 60px 30px;
+  background: #ffffff;
+  box-shadow: 0 15px 35px rgba(10, 140, 62, 0.12);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.testimonials-container:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 25px 50px rgba(10, 140, 62, 0.18);
 }
 
 .section-title {
   font-size: clamp(1.8rem, 4vw, 2.3rem);
   font-weight: 800;
-  color: var(--dark);
   display: flex;
+  flex-direction: column;
   align-items: center;
   justify-content: center;
   gap: 0.6rem;
   margin-bottom: 50px;
 }
+
 .section-title i {
   color: var(--primary);
+  font-size: 2.5rem;
 }
 
 .slider-wrapper {
@@ -1073,8 +1527,7 @@ h1 {
   display: flex;
   align-items: center;
   justify-content: center;
-  max-width: 1200px;
-  margin: 0 auto;
+  gap: 10px;
 }
 
 .testimonials-slider {
@@ -1085,20 +1538,20 @@ h1 {
   padding: 12px;
   scrollbar-width: none;
 }
-.testimonials-slider::-webkit-scrollbar {
-  display: none;
-}
+
+.testimonials-slider::-webkit-scrollbar { display: none; }
 
 .testimonial-card {
   flex: 0 0 300px;
-  background: rgba(255,255,255,0.9);
+  background: rgba(255,255,255,0.95);
   border-radius: 18px;
   padding: 24px;
   box-shadow: 0 6px 24px rgba(0,0,0,0.05);
+  border: 1px solid rgba(10,140,62,0.1);
   text-align: left;
   transition: all 0.3s ease;
-  border: 1px solid rgba(10,140,62,0.1);
 }
+
 .testimonial-card:hover {
   transform: translateY(-5px);
   box-shadow: 0 12px 30px rgba(10,140,62,0.12);
@@ -1112,7 +1565,7 @@ h1 {
   margin-bottom: 12px;
 }
 
-.avatar {
+.testimonial-avatar {
   width: 56px;
   height: 56px;
   border-radius: 50%;
@@ -1120,20 +1573,20 @@ h1 {
   border: 2px solid var(--primary);
 }
 
-h4 {
+.testimonial-name {
   margin: 0;
   font-size: 1rem;
   color: var(--dark);
   font-weight: 700;
 }
 
-.location {
+.testimonial-location {
   margin: 0;
   font-size: 0.9rem;
   color: var(--muted);
 }
 
-.quote {
+.testimonial-quote {
   font-size: 0.95rem;
   color: #1a3624;
   line-height: 1.5;
@@ -1144,35 +1597,39 @@ h4 {
   position: absolute;
   top: 50%;
   transform: translateY(-50%);
-  background: white;
-  border: 1px solid rgba(10,140,62,0.2);
-  color: var(--primary);
-  width: 40px;
-  height: 40px;
+  background: var(--primary);
+  color: #fff;
+  width: 50px;
+  height: 50px;
   border-radius: 50%;
-  font-size: 1.5rem;
+  font-size: 1.8rem;
   display: flex;
   align-items: center;
   justify-content: center;
   cursor: pointer;
-  box-shadow: 0 6px 16px rgba(0,0,0,0.08);
+  box-shadow: 0 6px 16px rgba(0,0,0,0.2);
   transition: all 0.3s ease;
   z-index: 10;
+  border: none;
 }
+
 .slider-btn:hover {
-  background: var(--primary);
-  color: #fff;
+  background: #0cce57;
   transform: translateY(-50%) scale(1.1);
 }
-.prev { left: -10px; }
-.next { right: -10px; }
+
+.prev { left: -15px; }
+.next { right: -15px; }
 
 @media (max-width: 700px) {
-  .testimonial-card {
-    flex: 0 0 80%;
-  }
-  .slider-btn {
-    display: none;
+  .testimonial-card { flex: 0 0 80%; }
+  .slider-btn { display: flex; }
+  .prev { left: -20px; }
+  .next { right: -20px; }
+  .slider-btn{
+    width: 40px;
+    height: 40px;
+    font-size: 20px;
   }
 }
 </style>
@@ -1182,7 +1639,6 @@ const slider = document.querySelector('.testimonials-slider');
 const nextBtn = document.querySelector('.next');
 const prevBtn = document.querySelector('.prev');
 
-// scroll control
 nextBtn.addEventListener('click', () => {
   slider.scrollBy({ left: 320, behavior: 'smooth' });
 });
@@ -1190,7 +1646,52 @@ prevBtn.addEventListener('click', () => {
   slider.scrollBy({ left: -320, behavior: 'smooth' });
 });
 
-// randomize testimonials on reload
+let isDragging = false;
+let startX;
+let scrollLeft;
+
+slider.addEventListener('mousedown', (e) => {
+  isDragging = true;
+  slider.classList.add('dragging');
+  startX = e.pageX - slider.offsetLeft;
+  scrollLeft = slider.scrollLeft;
+});
+
+slider.addEventListener('mouseleave', () => {
+  isDragging = false;
+  slider.classList.remove('dragging');
+});
+
+slider.addEventListener('mouseup', () => {
+  isDragging = false;
+  slider.classList.remove('dragging');
+});
+
+slider.addEventListener('mousemove', (e) => {
+  if (!isDragging) return;
+  e.preventDefault();
+  const x = e.pageX - slider.offsetLeft;
+  const walk = (x - startX) * 2;
+  slider.scrollLeft = scrollLeft - walk;
+});
+
+slider.addEventListener('touchstart', (e) => {
+  isDragging = true;
+  startX = e.touches[0].pageX - slider.offsetLeft;
+  scrollLeft = slider.scrollLeft;
+});
+
+slider.addEventListener('touchend', () => {
+  isDragging = false;
+});
+
+slider.addEventListener('touchmove', (e) => {
+  if (!isDragging) return;
+  const x = e.touches[0].pageX - slider.offsetLeft;
+  const walk = (x - startX) * 2;
+  slider.scrollLeft = scrollLeft - walk;
+});
+
 const cards = Array.from(slider.children);
 const shuffled = cards.sort(() => Math.random() - 0.5);
 slider.innerHTML = '';
@@ -1208,166 +1709,11 @@ shuffled.forEach(card => slider.appendChild(card));
 
 
 
+
+
 <!-- COUNTDOWN -->
 
 
-
-<section class="countdown-section">
-  <div class="countdown-content">
-    <h2 class="countdown-title">
-      ⏳ Limited-Time Offer: <span>Save 20% Today</span>
-    </h2>
-    <p class="countdown-subtitle">
-      Hurry — this special price ends in:
-    </p>
-
-    <div class="countdown-timer" id="countdown">
-      <div class="time-box">
-        <span class="number" id="days">00</span>
-        <span class="label">Days</span>
-      </div>
-      <div class="time-box">
-        <span class="number" id="hours">00</span>
-        <span class="label">Hours</span>
-      </div>
-      <div class="time-box">
-        <span class="number" id="minutes">00</span>
-        <span class="label">Minutes</span>
-      </div>
-      <div class="time-box">
-        <span class="number" id="seconds">00</span>
-        <span class="label">Seconds</span>
-      </div>
-    </div>
-
-    <a href="#order" class="countdown-btn">Claim Offer Now</a>
-  </div>
-</section>
-
-<style>
-.countdown-section {
-  background: linear-gradient(135deg, #0aa447, #0cd68b);
-  color: #fff;
-  padding: 100px 1.5rem;
-  text-align: center;
-  font-family: 'Inter', sans-serif;
-}
-
-.countdown-content {
-  max-width: 700px;
-  margin: 0 auto;
-}
-
-.countdown-title {
-  font-size: clamp(1.8rem, 4vw, 2.2rem);
-  font-weight: 800;
-  margin-bottom: 12px;
-}
-.countdown-title span {
-  color: #fff8cc;
-}
-
-.countdown-subtitle {
-  font-size: 1.1rem;
-  margin-bottom: 40px;
-  opacity: 0.95;
-}
-
-.countdown-timer {
-  display: flex;
-  justify-content: center;
-  gap: 18px;
-  flex-wrap: wrap;
-  margin-bottom: 40px;
-}
-
-.time-box {
-  background: rgba(255, 255, 255, 0.12);
-  border: 1px solid rgba(255, 255, 255, 0.25);
-  border-radius: 16px;
-  width: 100px;
-  padding: 18px 0;
-  box-shadow: 0 4px 20px rgba(0,0,0,0.1);
-  transition: transform 0.3s ease;
-}
-.time-box:hover {
-  transform: translateY(-5px);
-}
-.number {
-  display: block;
-  font-size: 2rem;
-  font-weight: 700;
-  letter-spacing: 1px;
-  color: #fff;
-}
-.label {
-  display: block;
-  font-size: 0.85rem;
-  text-transform: uppercase;
-  letter-spacing: 1px;
-  opacity: 0.9;
-}
-
-.countdown-btn {
-  display: inline-block;
-  background: #fff;
-  color: #0aa447;
-  padding: 14px 38px;
-  border-radius: 50px;
-  font-weight: 700;
-  font-size: 1rem;
-  text-decoration: none;
-  transition: all 0.3s ease;
-}
-.countdown-btn:hover {
-  background: #fff8cc;
-  transform: translateY(-3px);
-}
-
-@media (max-width: 600px) {
-  .time-box {
-    width: 80px;
-    padding: 14px 0;
-  }
-  .number {
-    font-size: 1.6rem;
-  }
-}
-</style>
-
-<script>
-// set countdown target (e.g. 3 days from now)
-const targetDate = new Date();
-targetDate.setDate(targetDate.getDate() + 3);
-
-const daysEl = document.getElementById('days');
-const hoursEl = document.getElementById('hours');
-const minutesEl = document.getElementById('minutes');
-const secondsEl = document.getElementById('seconds');
-
-function updateCountdown() {
-  const now = new Date();
-  const diff = targetDate - now;
-
-  if (diff <= 0) {
-    document.getElementById('countdown').innerHTML = "<p>Offer has ended!</p>";
-    return;
-  }
-
-  const days = Math.floor(diff / (1000 * 60 * 60 * 24));
-  const hours = Math.floor((diff / (1000 * 60 * 60)) % 24);
-  const minutes = Math.floor((diff / (1000 * 60)) % 60);
-  const seconds = Math.floor((diff / 1000) % 60);
-
-  daysEl.textContent = String(days).padStart(2, '0');
-  hoursEl.textContent = String(hours).padStart(2, '0');
-  minutesEl.textContent = String(minutes).padStart(2, '0');
-  secondsEl.textContent = String(seconds).padStart(2, '0');
-}
-
-setInterval(updateCountdown, 1000);
-updateCountdown();
-</script>
 
 
 
@@ -1642,100 +1988,842 @@ updateOfferCountdown();
 
 
 
+<!-- FORM -->
 
 
+<section class="order-section container">
+  <div class="order-card">
+    <h2 class="order-title">Fill the Form Below to Claim Your Bottle Before the Offer Ends</h2>
 
-
-
-
-
-
-    <section id="products" class="section container">
-      <h2 class="section-title">Choose Your Plan</h2>
-      <div class="pricing-grid">
-        <div class="price-card">
-          <div class="price-head">Single Bottle</div>
-          <div class="price-amount">₦9,500</div>
-          <ul class="price-features">
-            <li>30-day supply</li><li>Free delivery in select cities</li>
-          </ul>
-          <a class="btn btn-primary" href="https://wa.me/2348123456789?text=I%20want%20to%20order%20one%20bottle%20of%20Chelated%20Cal-Mag">Order on WhatsApp</a>
-        </div>
-        <div class="price-card featured">
-          <div class="price-head">3-Month Bundle</div>
-          <div class="price-amount">₦25,000 <span class="save">Save ₦3,500</span></div>
-          <ul class="price-features">
-            <li>Best value</li><li>Priority dispatch</li>
-          </ul>
-          <a class="btn btn-primary" href="https://wa.me/2348123456789?text=I%20want%20the%203-month%20bundle%20of%20Chelated%20Cal-Mag">Order on WhatsApp</a>
-        </div>
+    <form id="orderForm" class="order-form">
+      <div class="form-group">
+        <input type="text" id="name" placeholder="Full Name *" required>
       </div>
-      <p class="note">Need a full invoice or bulk order? <a href="mailto:orders@purevital.example">Email us</a> or chat on WhatsApp.</p>
-    </section>
-
-    <section class="faq container">
-      <h2 class="section-title">Frequently Asked Questions</h2>
-      <div class="faq-grid">
-        <details open>
-          <summary>Is this an original Neolife product?</summary>
-          <p>Yes — I’m a verified Neolife distributor. All products are 100% genuine with batch codes and expiry dates.</p>
-        </details>
-        <details>
-          <summary>How do I place an order?</summary>
-          <p>Click any "Order on WhatsApp" button to start a chat. We'll confirm stock, delivery, and payment options — then dispatch.</p>
-        </details>
-        <details>
-          <summary>Can I take it with other supplements?</summary>
-          <p>Generally yes, but if you are on medication or pregnant, please consult your healthcare provider.</p>
-        </details>
+      <div class="form-group">
+        <input type="tel" id="phone" placeholder="Phone Number (WhatsApp preferred) *" required>
       </div>
-    </section>
-
-    <section id="about" class="about container">
-      <div class="about-grid">
-        <div>
-          <h3>About Purevital</h3>
-          <p>I'm a certified Neolife distributor serving Ogbomoso, Benin City, Ilorin, Ibadan and nationwide. I help customers pick the best supplements and offer after-sale support.</p>
-          <ul class="about-list">
-            <li>Phone/WhatsApp: <a href="https://wa.me/2348123456789">+234 812 345 6789</a></li>
-            <li>Delivery: Nationwide via trusted couriers</li>
-            <li>Refunds: Contact within 7 days for issues</li>
-          </ul>
-        </div>
-        <div class="trust-cards">
-          <div class="trust-card">
-            <h4>Authenticity</h4>
-            <p>Verified products with batch codes.</p>
-          </div>
-          <div class="trust-card">
-            <h4>Fast Support</h4>
-            <p>Personalized guidance and dosage tips.</p>
-          </div>
-        </div>
+      <div class="form-group">
+        <input type="email" id="email" placeholder="Email">
       </div>
-    </section>
-  </main>
+      <div class="form-group">
+        <textarea id="address" rows="3" placeholder="Delivery Address *" required></textarea>
+      </div>
 
-  <footer class="site-footer">
-    <div class="container footer-grid">
-      <div>© <span id="year"></span> Purevital • Neolife Distributor</div>
-      <div class="footer-links">
-        <a href="#privacy">Privacy</a> <a href="#terms">Terms</a>
+      <div class="form-group">
+        <label for="quantity">Select Quantity *</label>
+        <select id="quantity" required>
+          <option value="" disabled selected>Select...</option>
+          <option>1 Bottle — ₦34,000</option>
+          <option>2 Bottles — ₦65,000 (Save ₦3,000)</option>
+          <option>3 Bottles — ₦99,999</option>
+          <option>Custom Quantity</option>
+        </select>
+      </div>
+
+      <div class="form-group">
+        <label for="payment">Payment Plan Option *</label>
+        <select id="payment" required>
+          <option value="" disabled selected>Select...</option>
+          <option>Pay Full Now</option>
+          <option>Pay ₦10,000 Now, Balance Later</option>
+        </select>
+      </div>
+
+      <div class="form-group">
+        <textarea id="note" rows="2" placeholder="Any Special Delivery Instructions?"></textarea>
+      </div>
+
+      <div class="form-check">
+        <input type="checkbox" id="agree" required>
+        <label for="agree">I confirm that the information provided is correct.</label>
+      </div>
+
+      <button type="submit" class="order-btn">Submit Order</button>
+      <p class="form-note">We’ll never share your details. Your privacy is safe with us.</p>
+    </form>
+  </div>
+</section>
+
+<div class="modal" id="sendModal">
+  <div class="modal-content">
+    <h3>Send Your Order Via</h3>
+    <div class="modal-buttons">
+      <button id="sendWhatsApp" class="modal-btn whatsapp">WhatsApp</button>
+      <button id="sendEmail" class="modal-btn email">Email</button>
+    </div>
+  </div>
+</div>
+
+<style>
+.order-section {
+  background: linear-gradient(180deg, #fafffb, #f4fff7);
+  padding: 100px 1.5rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-family: 'Inter', sans-serif;
+}
+.order-card {
+  background: #fff;
+  border-radius: 24px;
+  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.06);
+  padding: 48px;
+  max-width: 650px;
+  width: 100%;
+  text-align: center;
+}
+.order-title {
+  font-size: clamp(1.6rem, 4vw, 2.1rem);
+  color: #0a3a22;
+  font-weight: 800;
+  margin-bottom: 36px;
+}
+.order-form {
+  text-align: left;
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+}
+.form-group label {
+  font-weight: 600;
+  color: #123826;
+  margin-bottom: 6px;
+  display: block;
+}
+.form-group input,
+.form-group select,
+.form-group textarea {
+  width: 100%;
+  padding: 12px 14px;
+  border-radius: 10px;
+  border: 1px solid rgba(10, 140, 62, 0.25);
+  font-size: 1rem;
+  font-family: inherit;
+  color: #0a3a22;
+  background: #fcfffd;
+}
+.form-group input:focus,
+.form-group select:focus,
+.form-group textarea:focus {
+  outline: 2px solid #0cd68b;
+  border-color: transparent;
+}
+.form-check {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-size: 0.95rem;
+  color: #1a3b29;
+}
+.order-btn {
+  background: linear-gradient(135deg, #0aa447, #0cd68b);
+  color: #fff;
+  border: none;
+  border-radius: 50px;
+  padding: 14px 38px;
+  font-size: 1.1rem;
+  font-weight: 700;
+  cursor: pointer;
+  margin-top: 10px;
+  transition: all 0.3s ease;
+}
+.order-btn:hover {
+  transform: translateY(-3px);
+  background: linear-gradient(135deg, #0cd68b, #0aa447);
+}
+.form-note {
+  font-size: 0.85rem;
+  color: #597563;
+  margin-top: 14px;
+  text-align: center;
+}
+.modal {
+  display: none;
+  position: fixed;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.6);
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+}
+.modal-content {
+  background: #fff;
+  padding: 40px 30px;
+  border-radius: 16px;
+  text-align: center;
+  width: 90%;
+  max-width: 400px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+}
+.modal-content h3 {
+  margin-bottom: 24px;
+  font-size: 1.4rem;
+  color: #0a3a22;
+  font-weight: 700;
+}
+.modal-buttons {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+}
+.modal-btn {
+  padding: 12px 28px;
+  border-radius: 50px;
+  font-weight: 600;
+  border: none;
+  cursor: pointer;
+  font-size: 1rem;
+  transition: all 0.3s ease;
+}
+.whatsapp {
+  background: #25d366;
+  color: white;
+}
+.email {
+  background: #0072c6;
+  color: white;
+}
+.modal-btn:hover {
+  transform: translateY(-3px);
+  opacity: 0.9;
+}
+@media (max-width: 600px) {
+  .order-card {
+    padding: 36px 24px;
+  }
+  .modal-content {
+    padding: 32px 24px;
+  }
+}
+</style>
+
+<script>
+const form = document.getElementById("orderForm");
+const modal = document.getElementById("sendModal");
+const sendWhatsApp = document.getElementById("sendWhatsApp");
+const sendEmail = document.getElementById("sendEmail");
+
+form.addEventListener("submit", (e) => {
+  e.preventDefault();
+  if (!form.checkValidity()) return;
+  modal.style.display = "flex";
+});
+
+function formatMessage() {
+  const name = document.getElementById("name").value;
+  const phone = document.getElementById("phone").value;
+  const email = document.getElementById("email").value || "Not provided";
+  const address = document.getElementById("address").value;
+  const quantity = document.getElementById("quantity").value;
+  const payment = document.getElementById("payment").value;
+  const note = document.getElementById("note").value || "None";
+
+  return `🧾 *New Cal-Mag Order*%0A%0A👤 Name: ${name}%0A📞 Phone: ${phone}%0A📧 Email: ${email}%0A🏠 Address: ${address}%0A📦 Quantity: ${quantity}%0A💳 Payment Plan: ${payment}%0A📝 Note: ${note}%0A%0A✅ Ready to confirm order.`;
+}
+
+sendWhatsApp.addEventListener("click", () => {
+  const msg = formatMessage();
+  const whatsappURL = `https://wa.me/2347080000000?text=${msg}`;
+  window.open(whatsappURL, "_blank");
+  modal.style.display = "none";
+});
+
+sendEmail.addEventListener("click", () => {
+  const msg = decodeURIComponent(formatMessage()).replace(/\%0A/g, "\n");
+  const mailtoURL = `mailto:orders@neolife.com?subject=New Cal-Mag Order&body=${msg}`;
+  window.open(mailtoURL, "_blank");
+  modal.style.display = "none";
+});
+
+window.addEventListener("click", (e) => {
+  if (e.target === modal) modal.style.display = "none";
+});
+</script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!-- FAQ -->
+
+
+<section class="faq-section container">
+  <h2 class="faq-title">Frequently Asked Questions</h2>
+  <p class="faq-subtitle">Find quick answers about Cal-Mag — how it works, who it's for, and how to get yours.</p>
+
+  <div class="faq-container">
+    <div class="faq-item">
+      <button class="faq-question">What is Chelated Cal-Mag?<i class="ri-add-line"></i></button>
+      <div class="faq-answer">
+        <p>Chelated Cal-Mag is a unique supplement that combines <strong>Calcium, Magnesium, and Vitamin D₃</strong> — three nutrients your body needs every day for strong bones, relaxed muscles, better sleep, and balanced blood pressure.</p>
       </div>
     </div>
-  </footer>
 
-  <!-- FAQ JSON-LD for Google rich results -->
-  <script type="application/ld+json">
-  {
-    "@context": "https://schema.org",
-    "@type": "FAQPage",
-    "mainEntity": [
-      {"@type":"Question","name":"Is this an original Neolife product?","acceptedAnswer":{"@type":"Answer","text":"Yes — I’m a verified Neolife distributor. All products are 100% genuine with batch codes and expiry dates."}},
-      {"@type":"Question","name":"How do I place an order?","acceptedAnswer":{"@type":"Answer","text":"Click any Order on WhatsApp button to start a chat. We'll confirm stock, delivery, and payment options — then dispatch."}},
-      {"@type":"Question","name":"Can I take it with other supplements?","acceptedAnswer":{"@type":"Answer","text":"Generally yes, but if you are on medication or pregnant, please consult your healthcare provider."}}
-    ]
+    <div class="faq-item">
+      <button class="faq-question">How is this different from regular calcium tablets?<i class="ri-add-line"></i></button>
+      <div class="faq-answer">
+        <p>Most calcium pills don’t absorb well and can cause bloating or constipation. Chelated Cal-Mag is different because it’s <strong>chelated</strong>, meaning the minerals are naturally bonded for faster, smoother absorption. Plus, it also includes <strong>Magnesium and Vitamin D₃</strong> for complete support.</p>
+      </div>
+    </div>
+
+    <div class="faq-item">
+      <button class="faq-question">Who should use Cal-Mag?<i class="ri-add-line"></i></button>
+      <div class="faq-answer">
+        <ul>
+          <li>Adults who often feel tired or weak</li>
+          <li>People with muscle cramps, poor sleep, or joint pain</li>
+          <li>Women going through menopause</li>
+          <li>Anyone who wants stronger bones and stable blood pressure</li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="faq-item">
+      <button class="faq-question">How do I take it?<i class="ri-add-line"></i></button>
+      <div class="faq-answer">
+        <p>Take <strong>1–2 tablets daily after meals</strong>. If you have trouble sleeping or get night cramps, take it before bed.</p>
+      </div>
+    </div>
+
+    <div class="faq-item">
+      <button class="faq-question">How much is it? Can I pay in parts?<i class="ri-add-line"></i></button>
+      <div class="faq-answer">
+        <p>The full price is <strong>₦34,000</strong>, but you can start with <strong>₦10,000 now</strong> and pay the balance later (within 2–3 weeks). We offer flexible payment options because your health comes first.</p>
+      </div>
+    </div>
+
+    <div class="faq-item">
+      <button class="faq-question">How do I place my order?<i class="ri-add-line"></i></button>
+      <div class="faq-answer">
+        <p>Just fill out the order form or click any <strong>“Order Now”</strong> button. One of our reps will contact you to confirm your order and delivery details.</p>
+      </div>
+    </div>
+
+    <div class="faq-item">
+      <button class="faq-question">How long will delivery take?<i class="ri-add-line"></i></button>
+      <div class="faq-answer">
+        <p><strong>Lagos:</strong> 1–2 days<br><strong>Other States:</strong> 2–4 working days<br>We partner with trusted couriers and keep you updated every step of the way.</p>
+      </div>
+    </div>
+
+    <div class="faq-item">
+      <button class="faq-question">Can I return the product?<i class="ri-add-line"></i></button>
+      <div class="faq-answer">
+        <p>For safety reasons, we can’t take back opened bottles. But if your order arrives damaged or there’s a delivery issue, we’ll replace it for free. Your satisfaction is guaranteed.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<style>
+.faq-section {
+  background: linear-gradient(180deg, #f9fefc, #ffffff);
+  padding: 100px 1.5rem;
+  font-family: 'Inter', sans-serif;
+  color: #0d2618;
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+.faq-title {
+  text-align: center;
+  font-size: clamp(1.8rem, 4vw, 2.2rem);
+  font-weight: 800;
+  margin-bottom: 12px;
+  color: #082b19;
+}
+
+.faq-subtitle {
+  text-align: center;
+  max-width: 600px;
+  margin: 0 auto 48px;
+  color: #465a4c;
+  font-size: 1.05rem;
+  line-height: 1.6;
+}
+
+.faq-container {
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+}
+
+.faq-item {
+  background: #ffffff;
+  border-radius: 16px;
+  box-shadow: 0 10px 28px rgba(0, 0, 0, 0.04);
+  overflow: hidden;
+  transition: all 0.3s ease;
+  border: 1px solid rgba(10, 164, 71, 0.1);
+}
+
+.faq-question {
+  width: 100%;
+  background: none;
+  border: none;
+  outline: none;
+  cursor: pointer;
+  text-align: left;
+  padding: 22px 24px;
+  font-size: 1.05rem;
+  font-weight: 600;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  color: #0b2b1a;
+  transition: color 0.3s ease;
+}
+
+.faq-question:hover {
+  color: #0aa447;
+}
+
+.faq-question i {
+  font-size: 1.4rem;
+  color: #0aa447;
+  transition: transform 0.3s ease;
+}
+
+.faq-item.active .faq-question i {
+  transform: rotate(45deg);
+}
+
+.faq-answer {
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.4s ease;
+  padding: 0 24px;
+  color: #2b3e33;
+  line-height: 1.7;
+}
+
+.faq-item.active .faq-answer {
+  max-height: 600px;
+  padding-bottom: 22px;
+}
+
+.faq-answer ul {
+  padding-left: 20px;
+  margin: 0;
+}
+
+.faq-answer li {
+  margin-bottom: 6px;
+}
+
+@media (max-width: 600px) {
+  .faq-section {
+    padding: 70px 1rem;
   }
-  </script>
+  .faq-question {
+    padding: 18px 20px;
+    font-size: 1rem;
+  }
+}
+</style>
+
+<script>
+const faqItems = document.querySelectorAll('.faq-item');
+faqItems.forEach(item => {
+  const question = item.querySelector('.faq-question');
+  question.addEventListener('click', () => {
+    item.classList.toggle('active');
+    faqItems.forEach(other => {
+      if (other !== item) other.classList.remove('active');
+    });
+  });
+});
+</script>
+
+
+
+
+
+
+
+
+
+
+<footer class="footer-section">
+  <div class="footer-top">
+    <div class="trust-badges">
+      <div class="badge"><i class="ri-shield-check-line"></i><span>Secure Checkout</span></div>
+      <div class="badge"><i class="ri-checkbox-circle-line"></i><span>Authentic Products</span></div>
+      <div class="badge"><i class="ri-truck-line"></i><span>Nationwide Delivery</span></div>
+      <div class="badge"><i class="ri-customer-service-2-line"></i><span>Fast Support</span></div>
+    </div>
+    <p class="delivery-note">
+      We deliver nationwide — Lagos, Abuja, Benin, Ibadan, Ilorin, Enugu, Akure, Port Harcourt, and across Nigeria.
+    </p>
+  </div>
+
+  <div class="footer-main container">
+    <div class="footer-col about">
+      <h4>Neolife Cal-Mag Nigeria</h4>
+      <p>Supporting your body with nature’s best — for calmer muscles, stronger bones, and better sleep.</p>
+    </div>
+
+    <div class="footer-col links">
+      <h4>Quick Links</h4>
+      <ul>
+        <li><a href="#order">Order Now</a></li>
+        <li><a href="#faq">FAQs</a></li>
+        <li><a href="#" id="privacyLink">Privacy Policy</a></li>
+        <li><a href="#" id="refundLink">Refund Policy</a></li>
+      </ul>
+    </div>
+
+    <div class="footer-col contact">
+      <h4>Contact Us</h4>
+      <ul>
+        <li><i class="ri-whatsapp-line"></i> <a href="https://wa.me/2348012345678" target="_blank">Chat on WhatsApp</a></li>
+        <li><i class="ri-mail-line"></i> <a href="mailto:support@neolifecalmag.com">support@neolifecalmag.com</a></li>
+        <li><i class="ri-instagram-line"></i> <a href="#">@neolifecalmag_ng</a></li>
+      </ul>
+    </div>
+  </div>
+
+  <div class="footer-bottom">
+    <p>© 2025 Neolife Cal-Mag Nigeria. All rights reserved.</p>
+    <p class="disclaimer">This product is not intended to diagnose, treat, cure, or prevent any disease.</p>
+  </div>
+</footer>
+
+<!-- Privacy & Refund Modals -->
+<div class="modal" id="privacyModal">
+  <div class="modal-content">
+    <span class="close" id="closePrivacy">&times;</span>
+    <h3>Privacy Policy</h3>
+    <p>We respect your privacy and handle your personal information with care. Your data is used solely for order processing, support, and communication related to Neolife Cal-Mag. We never share or sell your details to third parties.</p>
+  </div>
+</div>
+<div class="modal" id="refundModal">
+  <div class="modal-content">
+    <span class="close" id="closeRefund">&times;</span>
+    <h3>Refund Policy</h3>
+    <p>Because our product is a consumable health item, opened packages cannot be returned. However, if your product is damaged, missing, or delivered incorrectly, we’ll replace it at no extra cost. Please contact our support within 48 hours of delivery.</p>
+  </div>
+</div>
+
+<style>
+/* ===== Footer Core ===== */
+.footer-section {
+  background: linear-gradient(135deg, #0a3a22, #0cd68b);
+  color: #fff;
+  font-family: 'Inter', sans-serif;
+  padding: 80px 1.5rem 40px;
+  border-top-left-radius: 24px;
+  border-top-right-radius: 24px;
+  overflow: hidden;
+  position: relative;
+}
+
+.footer-top {
+  text-align: center;
+  margin-bottom: 50px;
+}
+
+.trust-badges {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 18px;
+  margin-bottom: 16px;
+}
+
+.badge {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  background: linear-gradient(135deg, rgba(255,255,255,0.1), rgba(255,255,255,0.15));
+  border-radius: 50px;
+  padding: 12px 22px;
+  font-weight: 600;
+  color: #fff;
+  transform: translateY(30px);
+  opacity: 0;
+  animation: slideIn 0.6s forwards;
+  transition: transform 0.3s ease, background 0.3s ease;
+}
+.badge:nth-child(1) { animation-delay: 0.1s; }
+.badge:nth-child(2) { animation-delay: 0.2s; }
+.badge:nth-child(3) { animation-delay: 0.3s; }
+.badge:nth-child(4) { animation-delay: 0.4s; }
+
+.badge i {
+  font-size: 1.4rem;
+  background: linear-gradient(45deg, #ffffff, #f0fff5);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  transition: transform 0.3s ease;
+}
+
+.badge span {
+  transition: color 0.3s ease;
+}
+
+.badge:hover {
+  transform: translateY(-5px) scale(1.05);
+  background: linear-gradient(135deg, #0aa44730, #0cd68b50);
+}
+.badge:hover i { transform: scale(1.2); }
+
+.delivery-note {
+  font-size: 0.95rem;
+  max-width: 720px;
+  margin: 0 auto;
+  color: rgba(255, 255, 255, 0.9);
+  font-weight: 500;
+}
+
+.footer-main {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  gap: 32px;
+  margin-bottom: 40px;
+}
+
+.footer-col h4 {
+  font-size: 1.25rem;
+  font-weight: 700;
+  margin-bottom: 16px;
+  color: #fff;
+}
+
+.footer-col p,
+.footer-col ul {
+  font-size: 0.95rem;
+  color: rgba(255, 255, 255, 0.85);
+  line-height: 1.7;
+}
+
+.footer-col ul li {
+  margin-bottom: 12px;
+  position: relative;
+}
+
+.footer-col ul li a {
+  text-decoration: none;
+  color: #fff;
+  transition: all 0.4s ease;
+  background-image: linear-gradient(90deg, #0cd68b, #0aa447);
+  background-size: 0% 2px;
+  background-repeat: no-repeat;
+  background-position: left bottom;
+}
+.footer-col ul li a:hover {
+  color: #fff;
+  background-size: 100% 2px;
+}
+
+.footer-col i {
+  margin-right: 8px;
+  font-size: 1.2rem;
+  background: linear-gradient(45deg, #ffffff, #f0fff5);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  transition: transform 0.3s ease;
+}
+.footer-col li:hover i { transform: scale(1.2); }
+
+.footer-bottom {
+  text-align: center;
+  border-top: 1px solid rgba(255,255,255,0.25);
+  padding-top: 25px;
+}
+
+.footer-bottom p {
+  font-size: 0.9rem;
+  margin: 4px 0;
+  color: rgba(255, 255, 255, 0.7);
+}
+
+/* ===== Modal Styling ===== */
+.modal {
+  display: none;
+  position: fixed;
+  z-index: 9999;
+  padding-top: 80px;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  overflow-y: auto;
+  background-color: rgba(0, 0, 0, 0.6);
+  animation: fadeIn 0.3s ease;
+}
+
+.modal-content {
+  background: linear-gradient(145deg, #f0fdf7, #ffffff);
+  margin: auto;
+  padding: 30px 24px;
+  border-radius: 16px;
+  max-width: 520px;
+  box-shadow: 0 12px 30px rgba(0,0,0,0.2);
+  transform: scale(0.95);
+  opacity: 0;
+  animation: scaleIn 0.4s forwards;
+}
+
+.modal-content h3 {
+  font-size: 1.35rem;
+  color: #0a3a22;
+  margin-bottom: 14px;
+}
+
+.modal-content p {
+  font-size: 0.95rem;
+  color: #233c2f;
+  line-height: 1.7;
+}
+
+.close {
+  float: right;
+  font-size: 1.6rem;
+  color: #0a3a22;
+  cursor: pointer;
+}
+
+.close:hover { color: #0aa447; }
+
+@keyframes slideIn {
+  to { opacity: 1; transform: translateY(0);}
+}
+@keyframes fadeIn {
+  from {opacity: 0;}
+  to {opacity: 1;}
+}
+@keyframes scaleIn {
+  to {opacity:1; transform: scale(1);}
+}
+
+@media (max-width: 600px) {
+  .badge {font-size: 0.9rem; padding: 10px 16px;}
+  .footer-main {text-align: center;}
+  .modal-content {width: 90%;}
+}
+</style>
+
+<script>
+const privacyModal = document.getElementById("privacyModal");
+const refundModal = document.getElementById("refundModal");
+const privacyLink = document.getElementById("privacyLink");
+const refundLink = document.getElementById("refundLink");
+const closePrivacy = document.getElementById("closePrivacy");
+const closeRefund = document.getElementById("closeRefund");
+
+privacyLink.onclick = (e) => { e.preventDefault(); privacyModal.style.display = "block"; };
+refundLink.onclick = (e) => { e.preventDefault(); refundModal.style.display = "block"; };
+closePrivacy.onclick = () => privacyModal.style.display = "none";
+closeRefund.onclick = () => refundModal.style.display = "none";
+window.onclick = (e) => {
+  if (e.target === privacyModal) privacyModal.style.display = "none";
+  if (e.target === refundModal) refundModal.style.display = "none";
+};
+</script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+ <!-- FAQ JSON-LD for Google rich results -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "What is Chelated Cal-Mag?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Chelated Cal-Mag is a unique supplement that combines Calcium, Magnesium, and Vitamin D₃ — three nutrients your body needs every day for strong bones, relaxed muscles, better sleep, and balanced blood pressure."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "How is this different from regular calcium tablets?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Most calcium pills don’t absorb well and can cause bloating or constipation. Chelated Cal-Mag is different because it’s chelated, meaning the minerals are naturally bonded for faster, smoother absorption. Plus, it also includes Magnesium and Vitamin D₃ for complete support."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Who should use Cal-Mag?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Cal-Mag is great for adults who often feel tired or weak, people with muscle cramps, poor sleep, or joint pain, women going through menopause, and anyone who wants stronger bones and balanced blood pressure."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "How do I take it?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Take 1–2 tablets daily after meals. If you have trouble sleeping or get night cramps, take it before bed."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "How much is it? Can I pay in parts?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "The full price is ₦34,000, but you can start with ₦10,000 now and pay the balance later within 2–3 weeks. We offer flexible payment options because your health comes first."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "How do I place my order?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Just fill out the order form or click any 'Order Now' button. One of our reps will contact you to confirm your order and delivery details."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "How long will delivery take?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Lagos delivery takes 1–2 days, while other states take 2–4 working days. We partner with trusted couriers and keep you updated every step of the way."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Can I return the product?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "For safety reasons, we can’t take back opened bottles. But if your order arrives damaged or there’s a delivery issue, we’ll replace it for free. Your satisfaction is guaranteed."
+      }
+    }
+  ]
+}
+</script>
+
 </body>
 </html>

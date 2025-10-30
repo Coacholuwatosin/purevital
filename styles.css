@@ -110,48 +110,6 @@ body {
 
 
 
-.testimonials {
-  padding: 34px 0;
-}
-
-.testimonials-grid {
-  display: flex;
-  gap: 18px;
-  flex-wrap: wrap;
-}
-
-.testimonial-card {
-  background: linear-gradient(180deg, #fff, #fcfcfc);
-  padding: 18px;
-  border-radius: 14px;
-  box-shadow: var(--shadow-soft);
-  flex: 1;
-  min-width: 260px;
-  display: flex;
-  flex-direction: column;
-  gap: 10px;
-}
-
-.avatar {
-  width: 56px;
-  height: 56px;
-  border-radius: 50%;
-  object-fit: cover;
-}
-
-/* Quote styling */
-.testimonial-card blockquote {
-  margin: 0;
-  font-weight: 600;
-  color: #0b2b1a;
-}
-
-/* Caption */
-.testimonial-card figcaption {
-  margin-top: 6px;
-  font-size: 0.9rem;
-  color: var(--muted);
-}
 
 
 
@@ -169,109 +127,22 @@ body {
 
 
 /* ========== Pricing / offers ========== */
-.pricing-grid {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 18px;
-  margin-top: 16px;
-}
 
-.price-card {
-  background: linear-gradient(180deg, #fff, #fbfcfb);
-  padding: 20px;
-  border-radius: 14px;
-  text-align: center;
-  box-shadow: var(--shadow-soft);
-  transition: transform var(--transition-medium) ease, box-shadow var(--transition-medium) ease;
-}
 
-.price-card:hover {
-  transform: translateY(-6px);
-  box-shadow: 0 28px 70px rgba(10, 20, 30, 0.12);
-}
 
-.price-card.featured {
-  border: 2px solid rgba(10,140,62,0.12);
-  transform: translateY(-8px);
-}
 
-/* Price typography */
-.price-head {
-  font-weight: 700;
-  color: #0a4f2a;
-}
 
-.price-amount {
-  font-size: 1.6rem;
-  font-weight: 800;
-  margin: 14px 0;
-}
 
-.save {
-  display: block;
-  font-size: 0.85rem;
-  color: var(--muted);
-}
 
-/* ========== FAQ ========== */
-.faq {
-  padding: 28px 0;
-}
 
-.faq details {
-  background: var(--card);
-  padding: 14px;
-  border-radius: 12px;
-  box-shadow: var(--shadow-soft);
-  margin-bottom: 12px;
-}
 
-/* Summary style */
-.faq summary {
-  cursor: pointer;
-  font-weight: 700;
-  color: #0b2b1a;
-}
 
-/* ========== About & trust ========== */
-.about-grid {
-  display: grid;
-  grid-template-columns: 1fr 320px;
-  gap: 18px;
-  margin-top: 12px;
-}
-
-.trust-cards {
-  display: grid;
-  gap: 12px;
-}
-
-.trust-card {
-  background: linear-gradient(180deg, #fff, #fbfbfb);
-  padding: 14px;
-  border-radius: 12px;
-  box-shadow: var(--shadow-soft);
-}
 
 /* ========== Footer ========== */
-.site-footer {
-  padding: 20px 0;
-  border-top: 1px solid rgba(0,0,0,0.04);
-  margin-top: 40px;
-  color: var(--muted);
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  gap: 12px;
-}
 
-/* Footer small print */
-.site-footer small {
-  color: var(--muted);
-  font-size: 0.9rem;
-}
 
 /* ========== WhatsApp floating CTA ========== */
+
 #whatsapp-fab {
   position: fixed;
   right: 18px;
@@ -299,49 +170,5 @@ body {
 }
 
 /* ========== Responsive rules ========== */
-@media (max-width: 1000px) {
-  .hero-grid {
-    grid-template-columns: 1fr 360px;
-    gap: 24px;
-  }
 
-  .how-grid {
-    grid-template-columns: 1fr;
-  }
 
-  .benefits-grid {
-    grid-template-columns: repeat(2, 1fr);
-  }
-
-  .pricing-grid {
-    grid-template-columns: 1fr;
-  }
-
-  .about-grid {
-    grid-template-columns: 1fr;
-  }
-}
-
-@media (max-width: 680px) {
-  .hero-grid {
-    grid-template-columns: 1fr;
-    gap: 20px;
-  }
-
-  h1 {
-    font-size: 1.9rem;
-  }
-
-  .trust-list {
-    flex-direction: column;
-    gap: 8px;
-  }
-
-  .product-img {
-    width: 260px;
-  }
-
-  .container {
-    padding: 18px;
-  }
-}
